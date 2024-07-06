@@ -1,0 +1,3380 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://docs.python.org/3/library/csv.html
+Subject: =?utf-8?Q?csv=20=E2=80=94=20CSV=20File=20Reading=20and=20Writing=20=E2=80?=
+ =?utf-8?Q?=94=20Python=203.12.4=20documentation?=
+Date: Sat, 6 Jul 2024 19:08:38 +0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----"
+
+
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/html
+Content-ID: <frame-FB51B59C88753AEC6E7B55DDB238CA54@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/library/csv.html
+
+<!DOCTYPE html><html lang=3D"en" data-content_root=3D"../"><head><meta http=
+-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D=
+"stylesheet" type=3D"text/css" href=3D"cid:css-1f423888-95ed-4f28-b542-5170=
+7c0a9602@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0"><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+<meta property=3D"og:title" content=3D"csv =E2=80=94 CSV File Reading and W=
+riting">
+<meta property=3D"og:type" content=3D"website">
+<meta property=3D"og:url" content=3D"https://docs.python.org/3/library/csv.=
+html">
+<meta property=3D"og:site_name" content=3D"Python documentation">
+<meta property=3D"og:description" content=3D"Source code: Lib/csv.py The so=
+-called CSV (Comma Separated Values) format is the most common import and e=
+xport format for spreadsheets and databases. CSV format was used for many y=
+ears prior to att...">
+<meta property=3D"og:image" content=3D"https://docs.python.org/3/_static/og=
+-image.png">
+<meta property=3D"og:image:alt" content=3D"Python documentation">
+<meta name=3D"description" content=3D"Source code: Lib/csv.py The so-called=
+ CSV (Comma Separated Values) format is the most common import and export f=
+ormat for spreadsheets and databases. CSV format was used for many years pr=
+ior to att...">
+<meta property=3D"og:image:width" content=3D"200">
+<meta property=3D"og:image:height" content=3D"200">
+<meta name=3D"theme-color" content=3D"#3776ab">
+
+    <title>csv =E2=80=94 CSV File Reading and Writing =E2=80=94 Python 3.12=
+.4 documentation</title><meta name=3D"viewport" content=3D"width=3Ddevice-w=
+idth, initial-scale=3D1.0">
+   =20
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://docs.python.=
+org/3/_static/pygments.css?v=3D80d5e7a1">
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://docs.python.=
+org/3/_static/pydoctheme.css?v=3D41b4f12d">
+    <link id=3D"pygments_dark_css" media=3D"(prefers-color-scheme: dark)" r=
+el=3D"stylesheet" type=3D"text/css" href=3D"https://docs.python.org/3/_stat=
+ic/pygments_dark.css?v=3Db20cc3f5">
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+   =20
+    <link rel=3D"search" type=3D"application/opensearchdescription+xml" tit=
+le=3D"Search within Python 3.12.4 documentation" href=3D"https://docs.pytho=
+n.org/3/_static/opensearch.xml">
+    <link rel=3D"author" title=3D"About these documents" href=3D"https://do=
+cs.python.org/3/about.html">
+    <link rel=3D"index" title=3D"Index" href=3D"https://docs.python.org/3/g=
+enindex.html">
+    <link rel=3D"search" title=3D"Search" href=3D"https://docs.python.org/3=
+/search.html">
+    <link rel=3D"copyright" title=3D"Copyright" href=3D"https://docs.python=
+.org/3/copyright.html">
+    <link rel=3D"next" title=3D"configparser =E2=80=94 Configuration file p=
+arser" href=3D"https://docs.python.org/3/library/configparser.html">
+    <link rel=3D"prev" title=3D"File Formats" href=3D"https://docs.python.o=
+rg/3/library/fileformats.html">
+   =20
+     =20
+   =20
+    <link rel=3D"canonical" href=3D"https://docs.python.org/3/library/csv.h=
+tml">
+   =20
+     =20
+   =20
+
+   =20
+   =20
+<link rel=3D"stylesheet" href=3D"https://docs.python.org/3/_static/pydocthe=
+me_dark.css" media=3D"(prefers-color-scheme: dark)" id=3D"pydoctheme_dark_c=
+ss">
+    <link rel=3D"shortcut icon" type=3D"image/png" href=3D"https://docs.pyt=
+hon.org/3/_static/py.svg">
+           =20
+           =20
+           =20
+            =20
+           =20
+            <meta name=3D"readthedocs-addons-api-version" content=3D"1">
+
+  </head>
+<body data-new-gr-c-s-check-loaded=3D"14.1186.0" data-gr-ext-installed=3D""=
+ cz-shortcut-listen=3D"true">
+<div class=3D"mobile-nav">
+    <input type=3D"checkbox" id=3D"menuToggler" class=3D"toggler__input" ar=
+ia-controls=3D"navigation" aria-pressed=3D"false" aria-expanded=3D"false" r=
+ole=3D"button" aria-label=3D"Menu">
+    <nav class=3D"nav-content" role=3D"navigation">
+        <label for=3D"menuToggler" class=3D"toggler__label">
+            <span></span>
+        </label>
+        <span class=3D"nav-items-wrapper">
+            <a href=3D"https://www.python.org/" class=3D"nav-logo">
+                <img src=3D"https://docs.python.org/3/_static/py.svg" alt=
+=3D"Python logo">
+            </a>
+            <span class=3D"version_switcher_placeholder"><select id=3D"vers=
+ion_select"><option value=3D"3.14">dev (3.14)</option><option value=3D"3.13=
+">pre (3.13)</option><option value=3D"3.12" selected=3D"selected">3.12.4</o=
+ption><option value=3D"3.11">3.11</option><option value=3D"3.10">3.10</opti=
+on><option value=3D"3.9">3.9</option><option value=3D"3.8">3.8</option><opt=
+ion value=3D"3.7">3.7</option><option value=3D"3.6">3.6</option><option val=
+ue=3D"3.5">3.5</option><option value=3D"3.4">3.4</option><option value=3D"3=
+.3">3.3</option><option value=3D"3.2">3.2</option><option value=3D"3.1">3.1=
+</option><option value=3D"3.0">3.0</option><option value=3D"2.7">2.7</optio=
+n><option value=3D"2.6">2.6</option></select></span>
+            <form role=3D"search" class=3D"search" action=3D"https://docs.p=
+ython.org/3/search.html" method=3D"get">
+                <svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"20" heig=
+ht=3D"20" viewBox=3D"0 0 24 24" class=3D"search-icon">
+                    <path fill-rule=3D"nonzero" fill=3D"currentColor" d=3D"=
+M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.5=
+05 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.=
+27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-=
+6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></p=
+ath>
+                </svg>
+                <input placeholder=3D"Quick search" aria-label=3D"Quick sea=
+rch" type=3D"search" name=3D"q">
+                <input type=3D"submit" value=3D"Go">
+            </form>
+        </span>
+    </nav>
+    <div class=3D"menu-wrapper">
+        <nav class=3D"menu" role=3D"navigation" aria-label=3D"main navigati=
+on" tabindex=3D"-1">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"it">Italian</option><option value=3D"ja">Japanese</option><opti=
+on value=3D"ko">Korean</option><option value=3D"pt-br">Brazilian Portuguese=
+</option><option value=3D"tr">Turkish</option><option value=3D"zh-cn">Simpl=
+ified Chinese</option><option value=3D"zh-tw">Traditional Chinese</option><=
+/select></div>
+           =20
+<label class=3D"theme-selector-label">
+    Theme
+    <select class=3D"theme-selector">
+        <option value=3D"auto" selected=3D"">Auto</option>
+        <option value=3D"light">Light</option>
+        <option value=3D"dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href=3D"https://docs.python.org/3/contents.html">Table of Conten=
+ts</a></h3>
+    <ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#"><code class=3D"xref py py-mod docutils literal notranslate"><=
+span class=3D"pre">csv</span></code> =E2=80=94 CSV File Reading and Writing=
+</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#module-contents">Module Contents</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#dialects-and-formatting-parameters">Dialects and Formatting Par=
+ameters</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#reader-objects">Reader Objects</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#writer-objects">Writer Objects</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/library/filef=
+ormats.html" title=3D"previous chapter">File Formats</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/library/confi=
+gparser.html" title=3D"next chapter"><code class=3D"xref py py-mod docutils=
+ literal notranslate"><span class=3D"pre">configparser</span></code> =E2=80=
+=94 Configuration file parser</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://docs.python.org/3/bugs.html">Report a Bug</a><=
+/li>
+      <li>
+        <a href=3D"https://github.com/python/cpython/blob/main/Doc/library/=
+csv.rst" rel=3D"nofollow">Show Source
+        </a>
+      </li>
+    </ul>
+  </div>
+        </nav>
+    </div>
+</div>
+
+ =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://docs.python.org/3/genindex.html" title=3D"Gene=
+ral Index" accesskey=3D"I">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/py-modindex.html" title=3D"P=
+ython Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/library/configparser.html" t=
+itle=3D"configparser =E2=80=94 Configuration file parser" accesskey=3D"N">n=
+ext</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/library/fileformats.html" ti=
+tle=3D"File Formats" accesskey=3D"P">previous</a> |</li>
+
+          <li><img src=3D"https://docs.python.org/3/_static/py.svg" alt=3D"=
+Python logo" style=3D"vertical-align: middle; margin-top: -1px"></li>
+          <li><a href=3D"https://www.python.org/">Python</a> =C2=BB</li>
+          <li class=3D"switchers">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"it">Italian</option><option value=3D"ja">Japanese</option><opti=
+on value=3D"ko">Korean</option><option value=3D"pt-br">Brazilian Portuguese=
+</option><option value=3D"tr">Turkish</option><option value=3D"zh-cn">Simpl=
+ified Chinese</option><option value=3D"zh-tw">Traditional Chinese</option><=
+/select></div>
+            <div class=3D"version_switcher_placeholder"><select id=3D"versi=
+on_select"><option value=3D"3.14">dev (3.14)</option><option value=3D"3.13"=
+>pre (3.13)</option><option value=3D"3.12" selected=3D"selected">3.12.4</op=
+tion><option value=3D"3.11">3.11</option><option value=3D"3.10">3.10</optio=
+n><option value=3D"3.9">3.9</option><option value=3D"3.8">3.8</option><opti=
+on value=3D"3.7">3.7</option><option value=3D"3.6">3.6</option><option valu=
+e=3D"3.5">3.5</option><option value=3D"3.4">3.4</option><option value=3D"3.=
+3">3.3</option><option value=3D"3.2">3.2</option><option value=3D"3.1">3.1<=
+/option><option value=3D"3.0">3.0</option><option value=3D"2.7">2.7</option=
+><option value=3D"2.6">2.6</option></select></div>
+          </li>
+          <li>
+             =20
+          </li>
+    <li id=3D"cpython-language-and-version">
+      <a href=3D"https://docs.python.org/3/index.html">3.12.4 Documentation=
+</a> =C2=BB
+    </li>
+
+          <li class=3D"nav-item nav-item-1"><a href=3D"https://docs.python.=
+org/3/library/index.html">The Python Standard Library</a> =C2=BB</li>
+          <li class=3D"nav-item nav-item-2"><a href=3D"https://docs.python.=
+org/3/library/fileformats.html" accesskey=3D"U">File Formats</a> =C2=BB</li=
+>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://docs.python=
+.org/3/library/csv.html"><code class=3D"xref py py-mod docutils literal not=
+ranslate"><span class=3D"pre">csv</span></code> =E2=80=94 CSV File Reading =
+and Writing</a></li>
+                <li class=3D"right">
+                   =20
+
+    <div class=3D"inline-search" role=3D"search">
+        <form class=3D"inline-search" action=3D"https://docs.python.org/3/s=
+earch.html" method=3D"get">
+          <input placeholder=3D"Quick search" aria-label=3D"Quick search" t=
+ype=3D"search" name=3D"q" id=3D"search-box">
+          <input type=3D"submit" value=3D"Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class=3D"right">
+<label class=3D"theme-selector-label">
+    Theme
+    <select class=3D"theme-selector">
+        <option value=3D"auto" selected=3D"">Auto</option>
+        <option value=3D"light">Light</option>
+        <option value=3D"dark">Dark</option>
+    </select>
+</label> |</li>
+           =20
+      </ul>
+    </div>   =20
+
+    <div class=3D"document">
+      <div class=3D"documentwrapper">
+        <div class=3D"bodywrapper">
+          <div class=3D"body" role=3D"main">
+           =20
+  <section id=3D"module-csv">
+<span id=3D"csv-csv-file-reading-and-writing"></span><h1><code class=3D"xre=
+f py py-mod docutils literal notranslate"><span class=3D"pre">csv</span></c=
+ode> =E2=80=94 CSV File Reading and Writing<a class=3D"headerlink" href=3D"=
+https://docs.python.org/3/library/csv.html#module-csv" title=3D"Link to thi=
+s heading">=C2=B6</a></h1>
+<p><strong>Source code:</strong> <a class=3D"reference external" href=3D"ht=
+tps://github.com/python/cpython/tree/3.12/Lib/csv.py">Lib/csv.py</a></p>
+<hr class=3D"docutils" id=3D"index-0">
+<p>The so-called CSV (Comma Separated Values) format is the most common imp=
+ort and
+export format for spreadsheets and databases.  CSV format was used for many
+years prior to attempts to describe the format in a standardized way in
+<span class=3D"target" id=3D"index-1"></span><a class=3D"rfc reference exte=
+rnal" href=3D"https://datatracker.ietf.org/doc/html/rfc4180.html"><strong>R=
+FC 4180</strong></a>.  The lack of a well-defined standard means that subtl=
+e differences
+often exist in the data produced and consumed by different applications.  T=
+hese
+differences can make it annoying to process CSV files from multiple sources=
+.
+Still, while the delimiters and quoting characters vary, the overall format=
+ is
+similar enough that it is possible to write a single module which can
+efficiently manipulate such data, hiding the details of reading and writing=
+ the
+data from the programmer.</p>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#module-csv" title=3D"csv: Write and read tabular data to and=
+ from delimited files."><code class=3D"xref py py-mod docutils literal notr=
+anslate"><span class=3D"pre">csv</span></code></a> module implements classe=
+s to read and write tabular data in CSV
+format.  It allows programmers to say, =E2=80=9Cwrite this data in the form=
+at preferred
+by Excel,=E2=80=9D or =E2=80=9Cread data from this file which was generated=
+ by Excel,=E2=80=9D without
+knowing the precise details of the CSV format used by Excel.  Programmers c=
+an
+also describe the CSV formats understood by other applications or define th=
+eir
+own special-purpose CSV formats.</p>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#module-csv" title=3D"csv: Write and read tabular data to and=
+ from delimited files."><code class=3D"xref py py-mod docutils literal notr=
+anslate"><span class=3D"pre">csv</span></code></a> module=E2=80=99s <a clas=
+s=3D"reference internal" href=3D"https://docs.python.org/3/library/csv.html=
+#csv.reader" title=3D"csv.reader"><code class=3D"xref py py-class docutils =
+literal notranslate"><span class=3D"pre">reader</span></code></a> and <a cl=
+ass=3D"reference internal" href=3D"https://docs.python.org/3/library/csv.ht=
+ml#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-class docutil=
+s literal notranslate"><span class=3D"pre">writer</span></code></a> objects=
+ read and
+write sequences.  Programmers can also read and write data in dictionary fo=
+rm
+using the <a class=3D"reference internal" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.DictReader" title=3D"csv.DictReader"><code class=3D"x=
+ref py py-class docutils literal notranslate"><span class=3D"pre">DictReade=
+r</span></code></a> and <a class=3D"reference internal" href=3D"https://doc=
+s.python.org/3/library/csv.html#csv.DictWriter" title=3D"csv.DictWriter"><c=
+ode class=3D"xref py py-class docutils literal notranslate"><span class=3D"=
+pre">DictWriter</span></code></a> classes.</p>
+<div class=3D"admonition seealso">
+<p class=3D"admonition-title">See also</p>
+<dl class=3D"simple">
+<dt><span class=3D"target" id=3D"index-2"></span><a class=3D"pep reference =
+external" href=3D"https://peps.python.org/pep-0305/"><strong>PEP 305</stron=
+g></a> - CSV File API</dt><dd><p>The Python Enhancement Proposal which prop=
+osed this addition to Python.</p>
+</dd>
+</dl>
+</div>
+<section id=3D"module-contents">
+<span id=3D"csv-contents"></span><h2>Module Contents<a class=3D"headerlink"=
+ href=3D"https://docs.python.org/3/library/csv.html#module-contents" title=
+=3D"Link to this heading">=C2=B6</a></h2>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#module-csv" title=3D"csv: Write and read tabular data to and=
+ from delimited files."><code class=3D"xref py py-mod docutils literal notr=
+anslate"><span class=3D"pre">csv</span></code></a> module defines the follo=
+wing functions:</p>
+<dl class=3D"py function" id=3D"index-3">
+<dt class=3D"sig sig-object py" id=3D"csv.reader">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">reader</span></s=
+pan><span class=3D"sig-paren">(</span><em class=3D"sig-param"><span class=
+=3D"n"><span class=3D"pre">csvfile</span></span></em>, <em class=3D"sig-par=
+am"><span class=3D"n"><span class=3D"pre">dialect</span></span><span class=
+=3D"o"><span class=3D"pre">=3D</span></span><span class=3D"default_value"><=
+span class=3D"pre">'excel'</span></span></em>, <em class=3D"sig-param"><spa=
+n class=3D"o"><span class=3D"pre">**</span></span><span class=3D"n"><span c=
+lass=3D"pre">fmtparams</span></span></em><span class=3D"sig-paren">)</span>=
+<a class=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.html#=
+csv.reader" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Return a <a class=3D"reference internal" href=3D"https://docs.python=
+.org/3/library/csv.html#reader-objects"><span class=3D"std std-ref">reader =
+object</span></a> that will process
+lines from the given <em>csvfile</em>.  A csvfile must be an iterable of
+strings, each in the reader=E2=80=99s defined csv format.
+A csvfile is most commonly a file-like object or list.
+If <em>csvfile</em> is a file object,
+it should be opened with <code class=3D"docutils literal notranslate"><span=
+ class=3D"pre">newline=3D''</span></code>. <a class=3D"footnote-reference b=
+rackets" href=3D"https://docs.python.org/3/library/csv.html#id4" id=3D"id1"=
+ role=3D"doc-noteref"><span class=3D"fn-bracket">[</span>1<span class=3D"fn=
+-bracket">]</span></a>  An optional
+<em>dialect</em> parameter can be given which is used to define a set of pa=
+rameters
+specific to a particular CSV dialect.  It may be an instance of a subclass =
+of
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref py py-cl=
+ass docutils literal notranslate"><span class=3D"pre">Dialect</span></code>=
+</a> class or one of the strings returned by the
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.list_dialects" title=3D"csv.list_dialects"><code class=3D"xref =
+py py-func docutils literal notranslate"><span class=3D"pre">list_dialects(=
+)</span></code></a> function.  The other optional <em>fmtparams</em> keywor=
+d arguments
+can be given to override individual formatting parameters in the current
+dialect.  For full details about the dialect and formatting parameters, see
+section <a class=3D"reference internal" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv-fmt-params"><span class=3D"std std-ref">Dialects and Fo=
+rmatting Parameters</span></a>.</p>
+<p>Each row read from the csv file is returned as a list of strings.  No
+automatic data type conversion is performed unless the <code class=3D"docut=
+ils literal notranslate"><span class=3D"pre">QUOTE_NONNUMERIC</span></code>=
+ format
+option is specified (in which case unquoted fields are transformed into flo=
+ats).</p>
+<p>A short usage example:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" data-hidden=3D"false">&gt;&gt;&gt;</span><pre><span></span><=
+span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"kn">import</span> <spa=
+n class=3D"nn">csv</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">with</span> <span =
+class=3D"nb">open</span><span class=3D"p">(</span><span class=3D"s1">'eggs.=
+csv'</span><span class=3D"p">,</span> <span class=3D"n">newline</span><span=
+ class=3D"o">=3D</span><span class=3D"s1">''</span><span class=3D"p">)</spa=
+n> <span class=3D"k">as</span> <span class=3D"n">csvfile</span><span class=
+=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"n">spamreader</span> <span=
+ class=3D"o">=3D</span> <span class=3D"n">csv</span><span class=3D"o">.</sp=
+an><span class=3D"n">reader</span><span class=3D"p">(</span><span class=3D"=
+n">csvfile</span><span class=3D"p">,</span> <span class=3D"n">delimiter</sp=
+an><span class=3D"o">=3D</span><span class=3D"s1">' '</span><span class=3D"=
+p">,</span> <span class=3D"n">quotechar</span><span class=3D"o">=3D</span><=
+span class=3D"s1">'|'</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"k">for</span> <span class=
+=3D"n">row</span> <span class=3D"ow">in</span> <span class=3D"n">spamreader=
+</span><span class=3D"p">:</span>
+<span class=3D"gp">... </span>        <span class=3D"nb">print</span><span =
+class=3D"p">(</span><span class=3D"s1">', '</span><span class=3D"o">.</span=
+><span class=3D"n">join</span><span class=3D"p">(</span><span class=3D"n">r=
+ow</span><span class=3D"p">))</span>
+<span class=3D"go">Spam, Spam, Spam, Spam, Spam, Baked Beans</span>
+<span class=3D"go">Spam, Lovely Spam, Wonderful Spam</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.writer">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">writer</span></s=
+pan><span class=3D"sig-paren">(</span><em class=3D"sig-param"><span class=
+=3D"n"><span class=3D"pre">csvfile</span></span></em>, <em class=3D"sig-par=
+am"><span class=3D"n"><span class=3D"pre">dialect</span></span><span class=
+=3D"o"><span class=3D"pre">=3D</span></span><span class=3D"default_value"><=
+span class=3D"pre">'excel'</span></span></em>, <em class=3D"sig-param"><spa=
+n class=3D"o"><span class=3D"pre">**</span></span><span class=3D"n"><span c=
+lass=3D"pre">fmtparams</span></span></em><span class=3D"sig-paren">)</span>=
+<a class=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.html#=
+csv.writer" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Return a writer object responsible for converting the user=E2=80=99s=
+ data into delimited
+strings on the given file-like object.  <em>csvfile</em> can be any object =
+with a
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/i=
+o.html#io.TextIOBase.write" title=3D"io.TextIOBase.write"><code class=3D"xr=
+ef py py-meth docutils literal notranslate"><span class=3D"pre">write()</sp=
+an></code></a> method.  If <em>csvfile</em> is a file object, it should be =
+opened with
+<code class=3D"docutils literal notranslate"><span class=3D"pre">newline=3D=
+''</span></code> <a class=3D"footnote-reference brackets" href=3D"https://d=
+ocs.python.org/3/library/csv.html#id4" id=3D"id2" role=3D"doc-noteref"><spa=
+n class=3D"fn-bracket">[</span>1<span class=3D"fn-bracket">]</span></a>.  A=
+n optional <em>dialect</em>
+parameter can be given which is used to define a set of parameters specific=
+ to a
+particular CSV dialect.  It may be an instance of a subclass of the
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref py py-class =
+docutils literal notranslate"><span class=3D"pre">Dialect</span></code></a>=
+ class or one of the strings returned by the
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.list_dialects" title=3D"csv.list_dialects"><code class=3D"xref =
+py py-func docutils literal notranslate"><span class=3D"pre">list_dialects(=
+)</span></code></a> function.  The other optional <em>fmtparams</em> keywor=
+d arguments
+can be given to override individual formatting parameters in the current
+dialect.  For full details about dialects and formatting parameters, see
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv-fmt-params"><span class=3D"std std-ref">Dialects and Format=
+ting Parameters</span></a> section. To make it
+as easy as possible to interface with modules which implement the DB API, t=
+he
+value <a class=3D"reference internal" href=3D"https://docs.python.org/3/lib=
+rary/constants.html#None" title=3D"None"><code class=3D"xref py py-const do=
+cutils literal notranslate"><span class=3D"pre">None</span></code></a> is w=
+ritten as the empty string.  While this isn=E2=80=99t a
+reversible transformation, it makes it easier to dump SQL NULL data values =
+to
+CSV files without preprocessing the data returned from a <code class=3D"doc=
+utils literal notranslate"><span class=3D"pre">cursor.fetch*</span></code> =
+call.
+All other non-string data are stringified with <a class=3D"reference intern=
+al" href=3D"https://docs.python.org/3/library/stdtypes.html#str" title=3D"s=
+tr"><code class=3D"xref py py-func docutils literal notranslate"><span clas=
+s=3D"pre">str()</span></code></a> before being written.</p>
+<p>A short usage example:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'eggs.csv'</span><span class=3D"p">,</span> <=
+span class=3D"s1">'w'</span><span class=3D"p">,</span> <span class=3D"n">ne=
+wline</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span c=
+lass=3D"p">)</span> <span class=3D"k">as</span> <span class=3D"n">csvfile</=
+span><span class=3D"p">:</span>
+    <span class=3D"n">spamwriter</span> <span class=3D"o">=3D</span> <span =
+class=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">writer</s=
+pan><span class=3D"p">(</span><span class=3D"n">csvfile</span><span class=
+=3D"p">,</span> <span class=3D"n">delimiter</span><span class=3D"o">=3D</sp=
+an><span class=3D"s1">' '</span><span class=3D"p">,</span>
+                            <span class=3D"n">quotechar</span><span class=
+=3D"o">=3D</span><span class=3D"s1">'|'</span><span class=3D"p">,</span> <s=
+pan class=3D"n">quoting</span><span class=3D"o">=3D</span><span class=3D"n"=
+>csv</span><span class=3D"o">.</span><span class=3D"n">QUOTE_MINIMAL</span>=
+<span class=3D"p">)</span>
+    <span class=3D"n">spamwriter</span><span class=3D"o">.</span><span clas=
+s=3D"n">writerow</span><span class=3D"p">([</span><span class=3D"s1">'Spam'=
+</span><span class=3D"p">]</span> <span class=3D"o">*</span> <span class=3D=
+"mi">5</span> <span class=3D"o">+</span> <span class=3D"p">[</span><span cl=
+ass=3D"s1">'Baked Beans'</span><span class=3D"p">])</span>
+    <span class=3D"n">spamwriter</span><span class=3D"o">.</span><span clas=
+s=3D"n">writerow</span><span class=3D"p">([</span><span class=3D"s1">'Spam'=
+</span><span class=3D"p">,</span> <span class=3D"s1">'Lovely Spam'</span><s=
+pan class=3D"p">,</span> <span class=3D"s1">'Wonderful Spam'</span><span cl=
+ass=3D"p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.register_dialect">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">register_dialect=
+</span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param"><sp=
+an class=3D"n"><span class=3D"pre">name</span></span></em><span class=3D"op=
+tional">[</span>, <em class=3D"sig-param"><span class=3D"n"><span class=3D"=
+pre">dialect</span></span></em><span class=3D"optional">[</span>, <em class=
+=3D"sig-param"><span class=3D"n"><span class=3D"pre">**fmtparams</span></sp=
+an></em><span class=3D"optional">]</span><span class=3D"optional">]</span><=
+span class=3D"sig-paren">)</span><a class=3D"headerlink" href=3D"https://do=
+cs.python.org/3/library/csv.html#csv.register_dialect" title=3D"Link to thi=
+s definition">=C2=B6</a></dt>
+<dd><p>Associate <em>dialect</em> with <em>name</em>.  <em>name</em> must b=
+e a string. The
+dialect can be specified either by passing a sub-class of <a class=3D"refer=
+ence internal" href=3D"https://docs.python.org/3/library/csv.html#csv.Diale=
+ct" title=3D"csv.Dialect"><code class=3D"xref py py-class docutils literal =
+notranslate"><span class=3D"pre">Dialect</span></code></a>, or
+by <em>fmtparams</em> keyword arguments, or both, with keyword arguments ov=
+erriding
+parameters of the dialect. For full details about dialects and formatting
+parameters, see section <a class=3D"reference internal" href=3D"https://doc=
+s.python.org/3/library/csv.html#csv-fmt-params"><span class=3D"std std-ref"=
+>Dialects and Formatting Parameters</span></a>.</p>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.unregister_dialect">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">unregister_diale=
+ct</span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param"><=
+span class=3D"n"><span class=3D"pre">name</span></span></em><span class=3D"=
+sig-paren">)</span><a class=3D"headerlink" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.unregister_dialect" title=3D"Link to this definition=
+">=C2=B6</a></dt>
+<dd><p>Delete the dialect associated with <em>name</em> from the dialect re=
+gistry.  An
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Error" title=3D"csv.Error"><code class=3D"xref py py-exc docuti=
+ls literal notranslate"><span class=3D"pre">Error</span></code></a> is rais=
+ed if <em>name</em> is not a registered dialect name.</p>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.get_dialect">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">get_dialect</spa=
+n></span><span class=3D"sig-paren">(</span><em class=3D"sig-param"><span cl=
+ass=3D"n"><span class=3D"pre">name</span></span></em><span class=3D"sig-par=
+en">)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.get_dialect" title=3D"Link to this definition">=C2=B6</a></=
+dt>
+<dd><p>Return the dialect associated with <em>name</em>.  An <a class=3D"re=
+ference internal" href=3D"https://docs.python.org/3/library/csv.html#csv.Er=
+ror" title=3D"csv.Error"><code class=3D"xref py py-exc docutils literal not=
+ranslate"><span class=3D"pre">Error</span></code></a> is raised if
+<em>name</em> is not a registered dialect name.  This function returns an i=
+mmutable
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref py py-class =
+docutils literal notranslate"><span class=3D"pre">Dialect</span></code></a>=
+.</p>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.list_dialects">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">list_dialects</s=
+pan></span><span class=3D"sig-paren">(</span><span class=3D"sig-paren">)</s=
+pan><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.h=
+tml#csv.list_dialects" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Return the names of all registered dialects.</p>
+</dd></dl>
+
+<dl class=3D"py function">
+<dt class=3D"sig sig-object py" id=3D"csv.field_size_limit">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">field_size_limit=
+</span></span><span class=3D"sig-paren">(</span><span class=3D"optional">[<=
+/span><em class=3D"sig-param"><span class=3D"n"><span class=3D"pre">new_lim=
+it</span></span></em><span class=3D"optional">]</span><span class=3D"sig-pa=
+ren">)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/libr=
+ary/csv.html#csv.field_size_limit" title=3D"Link to this definition">=C2=B6=
+</a></dt>
+<dd><p>Returns the current maximum field size allowed by the parser. If <em=
+>new_limit</em> is
+given, this becomes the new limit.</p>
+</dd></dl>
+
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#module-csv" title=3D"csv: Write and read tabular data to and=
+ from delimited files."><code class=3D"xref py py-mod docutils literal notr=
+anslate"><span class=3D"pre">csv</span></code></a> module defines the follo=
+wing classes:</p>
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.DictReader">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">DictR=
+eader</span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param=
+"><span class=3D"n"><span class=3D"pre">f</span></span></em>, <em class=3D"=
+sig-param"><span class=3D"n"><span class=3D"pre">fieldnames</span></span><s=
+pan class=3D"o"><span class=3D"pre">=3D</span></span><span class=3D"default=
+_value"><span class=3D"pre">None</span></span></em>, <em class=3D"sig-param=
+"><span class=3D"n"><span class=3D"pre">restkey</span></span><span class=3D=
+"o"><span class=3D"pre">=3D</span></span><span class=3D"default_value"><spa=
+n class=3D"pre">None</span></span></em>, <em class=3D"sig-param"><span clas=
+s=3D"n"><span class=3D"pre">restval</span></span><span class=3D"o"><span cl=
+ass=3D"pre">=3D</span></span><span class=3D"default_value"><span class=3D"p=
+re">None</span></span></em>, <em class=3D"sig-param"><span class=3D"n"><spa=
+n class=3D"pre">dialect</span></span><span class=3D"o"><span class=3D"pre">=
+=3D</span></span><span class=3D"default_value"><span class=3D"pre">'excel'<=
+/span></span></em>, <em class=3D"sig-param"><span class=3D"o"><span class=
+=3D"pre">*</span></span><span class=3D"n"><span class=3D"pre">args</span></=
+span></em>, <em class=3D"sig-param"><span class=3D"o"><span class=3D"pre">*=
+*</span></span><span class=3D"n"><span class=3D"pre">kwds</span></span></em=
+><span class=3D"sig-paren">)</span><a class=3D"headerlink" href=3D"https://=
+docs.python.org/3/library/csv.html#csv.DictReader" title=3D"Link to this de=
+finition">=C2=B6</a></dt>
+<dd><p>Create an object that operates like a regular reader but maps the
+information in each row to a <a class=3D"reference internal" href=3D"https:=
+//docs.python.org/3/library/stdtypes.html#dict" title=3D"dict"><code class=
+=3D"xref py py-class docutils literal notranslate"><span class=3D"pre">dict=
+</span></code></a> whose keys are given by the
+optional <em>fieldnames</em> parameter.</p>
+<p>The <em>fieldnames</em> parameter is a <a class=3D"reference internal" h=
+ref=3D"https://docs.python.org/3/glossary.html#term-sequence"><span class=
+=3D"xref std std-term">sequence</span></a>.  If <em>fieldnames</em> is
+omitted, the values in the first row of file <em>f</em> will be used as the
+fieldnames and will be omitted from the results. If
+<em>fieldnames</em> is provided, they will be used and the first row will b=
+e
+included in the results.  Regardless of how the fieldnames are determined,
+the dictionary preserves their original ordering.</p>
+<p>If a row has more fields than fieldnames, the remaining data is put in a
+list and stored with the fieldname specified by <em>restkey</em> (which def=
+aults
+to <code class=3D"docutils literal notranslate"><span class=3D"pre">None</s=
+pan></code>).  If a non-blank row has fewer fields than fieldnames, the
+missing values are filled-in with the value of <em>restval</em> (which defa=
+ults
+to <code class=3D"docutils literal notranslate"><span class=3D"pre">None</s=
+pan></code>).</p>
+<p>All other optional or keyword arguments are passed to the underlying
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref py py-class do=
+cutils literal notranslate"><span class=3D"pre">reader</span></code></a> in=
+stance.</p>
+<p>If the argument passed to <em>fieldnames</em> is an iterator, it will be=
+ coerced to a <a class=3D"reference internal" href=3D"https://docs.python.o=
+rg/3/library/stdtypes.html#list" title=3D"list"><code class=3D"xref py py-c=
+lass docutils literal notranslate"><span class=3D"pre">list</span></code></=
+a>.</p>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.6: </span>R=
+eturned rows are now of type <code class=3D"xref py py-class docutils liter=
+al notranslate"><span class=3D"pre">OrderedDict</span></code>.</p>
+</div>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.8: </span>R=
+eturned rows are now of type <a class=3D"reference internal" href=3D"https:=
+//docs.python.org/3/library/stdtypes.html#dict" title=3D"dict"><code class=
+=3D"xref py py-class docutils literal notranslate"><span class=3D"pre">dict=
+</span></code></a>.</p>
+</div>
+<p>A short usage example:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><span class=3D"copybutton" title=3D"Hide the promp=
+ts and output" data-hidden=3D"false">&gt;&gt;&gt;</span><pre><span></span><=
+span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"kn">import</span> <spa=
+n class=3D"nn">csv</span>
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"k">with</span> <span =
+class=3D"nb">open</span><span class=3D"p">(</span><span class=3D"s1">'names=
+.csv'</span><span class=3D"p">,</span> <span class=3D"n">newline</span><spa=
+n class=3D"o">=3D</span><span class=3D"s1">''</span><span class=3D"p">)</sp=
+an> <span class=3D"k">as</span> <span class=3D"n">csvfile</span><span class=
+=3D"p">:</span>
+<span class=3D"gp">... </span>    <span class=3D"n">reader</span> <span cla=
+ss=3D"o">=3D</span> <span class=3D"n">csv</span><span class=3D"o">.</span><=
+span class=3D"n">DictReader</span><span class=3D"p">(</span><span class=3D"=
+n">csvfile</span><span class=3D"p">)</span>
+<span class=3D"gp">... </span>    <span class=3D"k">for</span> <span class=
+=3D"n">row</span> <span class=3D"ow">in</span> <span class=3D"n">reader</sp=
+an><span class=3D"p">:</span>
+<span class=3D"gp">... </span>        <span class=3D"nb">print</span><span =
+class=3D"p">(</span><span class=3D"n">row</span><span class=3D"p">[</span><=
+span class=3D"s1">'first_name'</span><span class=3D"p">],</span> <span clas=
+s=3D"n">row</span><span class=3D"p">[</span><span class=3D"s1">'last_name'<=
+/span><span class=3D"p">])</span>
+<span class=3D"gp">...</span>
+<span class=3D"go">Eric Idle</span>
+<span class=3D"go">John Cleese</span>
+
+<span class=3D"gp">&gt;&gt;&gt; </span><span class=3D"nb">print</span><span=
+ class=3D"p">(</span><span class=3D"n">row</span><span class=3D"p">)</span>
+<span class=3D"go">{'first_name': 'John', 'last_name': 'Cleese'}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.DictWriter">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">DictW=
+riter</span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param=
+"><span class=3D"n"><span class=3D"pre">f</span></span></em>, <em class=3D"=
+sig-param"><span class=3D"n"><span class=3D"pre">fieldnames</span></span></=
+em>, <em class=3D"sig-param"><span class=3D"n"><span class=3D"pre">restval<=
+/span></span><span class=3D"o"><span class=3D"pre">=3D</span></span><span c=
+lass=3D"default_value"><span class=3D"pre">''</span></span></em>, <em class=
+=3D"sig-param"><span class=3D"n"><span class=3D"pre">extrasaction</span></s=
+pan><span class=3D"o"><span class=3D"pre">=3D</span></span><span class=3D"d=
+efault_value"><span class=3D"pre">'raise'</span></span></em>, <em class=3D"=
+sig-param"><span class=3D"n"><span class=3D"pre">dialect</span></span><span=
+ class=3D"o"><span class=3D"pre">=3D</span></span><span class=3D"default_va=
+lue"><span class=3D"pre">'excel'</span></span></em>, <em class=3D"sig-param=
+"><span class=3D"o"><span class=3D"pre">*</span></span><span class=3D"n"><s=
+pan class=3D"pre">args</span></span></em>, <em class=3D"sig-param"><span cl=
+ass=3D"o"><span class=3D"pre">**</span></span><span class=3D"n"><span class=
+=3D"pre">kwds</span></span></em><span class=3D"sig-paren">)</span><a class=
+=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.html#csv.Dict=
+Writer" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Create an object which operates like a regular writer but maps dicti=
+onaries
+onto output rows.  The <em>fieldnames</em> parameter is a <a class=3D"refer=
+ence internal" href=3D"https://docs.python.org/3/library/collections.abc.ht=
+ml#module-collections.abc" title=3D"collections.abc: Abstract base classes =
+for containers"><code class=3D"xref py py-mod docutils literal notranslate"=
+><span class=3D"pre">sequence</span></code></a> of keys that identify the o=
+rder in which values in the
+dictionary passed to the <a class=3D"reference internal" href=3D"https://do=
+cs.python.org/3/library/csv.html#csv.csvwriter.writerow" title=3D"csv.csvwr=
+iter.writerow"><code class=3D"xref py py-meth docutils literal notranslate"=
+><span class=3D"pre">writerow()</span></code></a> method are written to fil=
+e
+<em>f</em>.  The optional <em>restval</em> parameter specifies the value to=
+ be
+written if the dictionary is missing a key in <em>fieldnames</em>.  If the
+dictionary passed to the <a class=3D"reference internal" href=3D"https://do=
+cs.python.org/3/library/csv.html#csv.csvwriter.writerow" title=3D"csv.csvwr=
+iter.writerow"><code class=3D"xref py py-meth docutils literal notranslate"=
+><span class=3D"pre">writerow()</span></code></a> method contains a key not=
+ found in
+<em>fieldnames</em>, the optional <em>extrasaction</em> parameter indicates=
+ what action to
+take.
+If it is set to <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">'raise'</span></code>, the default value, a <a class=3D"reference int=
+ernal" href=3D"https://docs.python.org/3/library/exceptions.html#ValueError=
+" title=3D"ValueError"><code class=3D"xref py py-exc docutils literal notra=
+nslate"><span class=3D"pre">ValueError</span></code></a>
+is raised.
+If it is set to <code class=3D"docutils literal notranslate"><span class=3D=
+"pre">'ignore'</span></code>, extra values in the dictionary are ignored.
+Any other optional or keyword arguments are passed to the underlying
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-class do=
+cutils literal notranslate"><span class=3D"pre">writer</span></code></a> in=
+stance.</p>
+<p>Note that unlike the <a class=3D"reference internal" href=3D"https://doc=
+s.python.org/3/library/csv.html#csv.DictReader" title=3D"csv.DictReader"><c=
+ode class=3D"xref py py-class docutils literal notranslate"><span class=3D"=
+pre">DictReader</span></code></a> class, the <em>fieldnames</em> parameter
+of the <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#csv.DictWriter" title=3D"csv.DictWriter"><code class=3D"xref=
+ py py-class docutils literal notranslate"><span class=3D"pre">DictWriter</=
+span></code></a> class is not optional.</p>
+<p>If the argument passed to <em>fieldnames</em> is an iterator, it will be=
+ coerced to a <a class=3D"reference internal" href=3D"https://docs.python.o=
+rg/3/library/stdtypes.html#list" title=3D"list"><code class=3D"xref py py-c=
+lass docutils literal notranslate"><span class=3D"pre">list</span></code></=
+a>.</p>
+<p>A short usage example:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'names.csv'</span><span class=3D"p">,</span> =
+<span class=3D"s1">'w'</span><span class=3D"p">,</span> <span class=3D"n">n=
+ewline</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span =
+class=3D"p">)</span> <span class=3D"k">as</span> <span class=3D"n">csvfile<=
+/span><span class=3D"p">:</span>
+    <span class=3D"n">fieldnames</span> <span class=3D"o">=3D</span> <span =
+class=3D"p">[</span><span class=3D"s1">'first_name'</span><span class=3D"p"=
+>,</span> <span class=3D"s1">'last_name'</span><span class=3D"p">]</span>
+    <span class=3D"n">writer</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">DictWriter</s=
+pan><span class=3D"p">(</span><span class=3D"n">csvfile</span><span class=
+=3D"p">,</span> <span class=3D"n">fieldnames</span><span class=3D"o">=3D</s=
+pan><span class=3D"n">fieldnames</span><span class=3D"p">)</span>
+
+    <span class=3D"n">writer</span><span class=3D"o">.</span><span class=3D=
+"n">writeheader</span><span class=3D"p">()</span>
+    <span class=3D"n">writer</span><span class=3D"o">.</span><span class=3D=
+"n">writerow</span><span class=3D"p">({</span><span class=3D"s1">'first_nam=
+e'</span><span class=3D"p">:</span> <span class=3D"s1">'Baked'</span><span =
+class=3D"p">,</span> <span class=3D"s1">'last_name'</span><span class=3D"p"=
+>:</span> <span class=3D"s1">'Beans'</span><span class=3D"p">})</span>
+    <span class=3D"n">writer</span><span class=3D"o">.</span><span class=3D=
+"n">writerow</span><span class=3D"p">({</span><span class=3D"s1">'first_nam=
+e'</span><span class=3D"p">:</span> <span class=3D"s1">'Lovely'</span><span=
+ class=3D"p">,</span> <span class=3D"s1">'last_name'</span><span class=3D"p=
+">:</span> <span class=3D"s1">'Spam'</span><span class=3D"p">})</span>
+    <span class=3D"n">writer</span><span class=3D"o">.</span><span class=3D=
+"n">writerow</span><span class=3D"p">({</span><span class=3D"s1">'first_nam=
+e'</span><span class=3D"p">:</span> <span class=3D"s1">'Wonderful'</span><s=
+pan class=3D"p">,</span> <span class=3D"s1">'last_name'</span><span class=
+=3D"p">:</span> <span class=3D"s1">'Spam'</span><span class=3D"p">})</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">Diale=
+ct</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv.Dialect" title=3D"Link to this definition">=C2=B6</a></=
+dt>
+<dd><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">Dialect</span>=
+</code></a> class is a container class whose attributes contain
+information for how to handle doublequotes, whitespace, delimiters, etc.
+Due to the lack of a strict CSV specification, different applications
+produce subtly different CSV data.  <a class=3D"reference internal" href=3D=
+"https://docs.python.org/3/library/csv.html#csv.Dialect" title=3D"csv.Diale=
+ct"><code class=3D"xref py py-class docutils literal notranslate"><span cla=
+ss=3D"pre">Dialect</span></code></a> instances define how
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref py py-class do=
+cutils literal notranslate"><span class=3D"pre">reader</span></code></a> an=
+d <a class=3D"reference internal" href=3D"https://docs.python.org/3/library=
+/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-class =
+docutils literal notranslate"><span class=3D"pre">writer</span></code></a> =
+instances behave.</p>
+<p>All available <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"=
+xref py py-class docutils literal notranslate"><span class=3D"pre">Dialect<=
+/span></code></a> names are returned by <a class=3D"reference internal" hre=
+f=3D"https://docs.python.org/3/library/csv.html#csv.list_dialects" title=3D=
+"csv.list_dialects"><code class=3D"xref py py-func docutils literal notrans=
+late"><span class=3D"pre">list_dialects()</span></code></a>,
+and they can be registered with specific <a class=3D"reference internal" hr=
+ef=3D"https://docs.python.org/3/library/csv.html#csv.reader" title=3D"csv.r=
+eader"><code class=3D"xref py py-class docutils literal notranslate"><span =
+class=3D"pre">reader</span></code></a> and <a class=3D"reference internal" =
+href=3D"https://docs.python.org/3/library/csv.html#csv.writer" title=3D"csv=
+.writer"><code class=3D"xref py py-class docutils literal notranslate"><spa=
+n class=3D"pre">writer</span></code></a>
+classes through their initializer (<code class=3D"docutils literal notransl=
+ate"><span class=3D"pre">__init__</span></code>) functions like this:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'students.csv'</span><span class=3D"p">,</spa=
+n> <span class=3D"s1">'w'</span><span class=3D"p">,</span> <span class=3D"n=
+">newline</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><sp=
+an class=3D"p">)</span> <span class=3D"k">as</span> <span class=3D"n">csvfi=
+le</span><span class=3D"p">:</span>
+    <span class=3D"n">writer</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">writer</span>=
+<span class=3D"p">(</span><span class=3D"n">csvfile</span><span class=3D"p"=
+>,</span> <span class=3D"n">dialect</span><span class=3D"o">=3D</span><span=
+ class=3D"s1">'unix'</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.excel">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">excel=
+</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/lib=
+rary/csv.html#csv.excel" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.excel" title=3D"csv.excel"><code class=3D"xref py py=
+-class docutils literal notranslate"><span class=3D"pre">excel</span></code=
+></a> class defines the usual properties of an Excel-generated CSV
+file.  It is registered with the dialect name <code class=3D"docutils liter=
+al notranslate"><span class=3D"pre">'excel'</span></code>.</p>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.excel_tab">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">excel=
+_tab</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.excel_tab" title=3D"Link to this definition">=C2=B6</=
+a></dt>
+<dd><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.excel_tab" title=3D"csv.excel_tab"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">excel_tab<=
+/span></code></a> class defines the usual properties of an Excel-generated
+TAB-delimited file.  It is registered with the dialect name <code class=3D"=
+docutils literal notranslate"><span class=3D"pre">'excel-tab'</span></code>=
+.</p>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.unix_dialect">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">unix_=
+dialect</span></span><a class=3D"headerlink" href=3D"https://docs.python.or=
+g/3/library/csv.html#csv.unix_dialect" title=3D"Link to this definition">=
+=C2=B6</a></dt>
+<dd><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.unix_dialect" title=3D"csv.unix_dialect"><code class=
+=3D"xref py py-class docutils literal notranslate"><span class=3D"pre">unix=
+_dialect</span></code></a> class defines the usual properties of a CSV file
+generated on UNIX systems, i.e. using <code class=3D"docutils literal notra=
+nslate"><span class=3D"pre">'\n'</span></code> as line terminator and quoti=
+ng
+all fields.  It is registered with the dialect name <code class=3D"docutils=
+ literal notranslate"><span class=3D"pre">'unix'</span></code>.</p>
+<div class=3D"versionadded">
+<p><span class=3D"versionmodified added">Added in version 3.2.</span></p>
+</div>
+</dd></dl>
+
+<dl class=3D"py class">
+<dt class=3D"sig sig-object py" id=3D"csv.Sniffer">
+<em class=3D"property"><span class=3D"pre">class</span><span class=3D"w"> <=
+/span></em><span class=3D"sig-prename descclassname"><span class=3D"pre">cs=
+v.</span></span><span class=3D"sig-name descname"><span class=3D"pre">Sniff=
+er</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv.Sniffer" title=3D"Link to this definition">=C2=B6</a></=
+dt>
+<dd><p>The <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.Sniffer" title=3D"csv.Sniffer"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">Sniffer</span>=
+</code></a> class is used to deduce the format of a CSV file.</p>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#csv.Sniffer" title=3D"csv.Sniffer"><code class=3D"xref py py=
+-class docutils literal notranslate"><span class=3D"pre">Sniffer</span></co=
+de></a> class provides two methods:</p>
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.Sniffer.sniff">
+<span class=3D"sig-name descname"><span class=3D"pre">sniff</span></span><s=
+pan class=3D"sig-paren">(</span><em class=3D"sig-param"><span class=3D"n"><=
+span class=3D"pre">sample</span></span></em>, <em class=3D"sig-param"><span=
+ class=3D"n"><span class=3D"pre">delimiters</span></span><span class=3D"o">=
+<span class=3D"pre">=3D</span></span><span class=3D"default_value"><span cl=
+ass=3D"pre">None</span></span></em><span class=3D"sig-paren">)</span><a cla=
+ss=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.html#csv.Sn=
+iffer.sniff" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Analyze the given <em>sample</em> and return a <a class=3D"reference=
+ internal" href=3D"https://docs.python.org/3/library/csv.html#csv.Dialect" =
+title=3D"csv.Dialect"><code class=3D"xref py py-class docutils literal notr=
+anslate"><span class=3D"pre">Dialect</span></code></a> subclass
+reflecting the parameters found.  If the optional <em>delimiters</em> param=
+eter
+is given, it is interpreted as a string containing possible valid
+delimiter characters.</p>
+</dd></dl>
+
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.Sniffer.has_header">
+<span class=3D"sig-name descname"><span class=3D"pre">has_header</span></sp=
+an><span class=3D"sig-paren">(</span><em class=3D"sig-param"><span class=3D=
+"n"><span class=3D"pre">sample</span></span></em><span class=3D"sig-paren">=
+)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Sniffer.has_header" title=3D"Link to this definition">=C2=B6</a=
+></dt>
+<dd><p>Analyze the sample text (presumed to be in CSV format) and return
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+onstants.html#True" title=3D"True"><code class=3D"xref py py-const docutils=
+ literal notranslate"><span class=3D"pre">True</span></code></a> if the fir=
+st row appears to be a series of column headers.
+Inspecting each column, one of two key criteria will be considered to
+estimate if the sample contains a header:</p>
+<ul class=3D"simple">
+<li><p>the second through n-th rows contain numeric values</p></li>
+<li><p>the second through n-th rows contain strings where at least one valu=
+e=E2=80=99s
+length differs from that of the putative header of that column.</p></li>
+</ul>
+<p>Twenty rows after the first row are sampled; if more than half of column=
+s +
+rows meet the criteria, <a class=3D"reference internal" href=3D"https://doc=
+s.python.org/3/library/constants.html#True" title=3D"True"><code class=3D"x=
+ref py py-const docutils literal notranslate"><span class=3D"pre">True</spa=
+n></code></a> is returned.</p>
+</dd></dl>
+
+<div class=3D"admonition note">
+<p class=3D"admonition-title">Note</p>
+<p>This method is a rough heuristic and may produce both false positives an=
+d
+negatives.</p>
+</div>
+</dd></dl>
+
+<p>An example for <a class=3D"reference internal" href=3D"https://docs.pyth=
+on.org/3/library/csv.html#csv.Sniffer" title=3D"csv.Sniffer"><code class=3D=
+"xref py py-class docutils literal notranslate"><span class=3D"pre">Sniffer=
+</span></code></a> use:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"k">with</span> <s=
+pan class=3D"nb">open</span><span class=3D"p">(</span><span class=3D"s1">'e=
+xample.csv'</span><span class=3D"p">,</span> <span class=3D"n">newline</spa=
+n><span class=3D"o">=3D</span><span class=3D"s1">''</span><span class=3D"p"=
+>)</span> <span class=3D"k">as</span> <span class=3D"n">csvfile</span><span=
+ class=3D"p">:</span>
+    <span class=3D"n">dialect</span> <span class=3D"o">=3D</span> <span cla=
+ss=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">Sniffer</spa=
+n><span class=3D"p">()</span><span class=3D"o">.</span><span class=3D"n">sn=
+iff</span><span class=3D"p">(</span><span class=3D"n">csvfile</span><span c=
+lass=3D"o">.</span><span class=3D"n">read</span><span class=3D"p">(</span><=
+span class=3D"mi">1024</span><span class=3D"p">))</span>
+    <span class=3D"n">csvfile</span><span class=3D"o">.</span><span class=
+=3D"n">seek</span><span class=3D"p">(</span><span class=3D"mi">0</span><spa=
+n class=3D"p">)</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">csvfile</span><span class=3D"p"=
+>,</span> <span class=3D"n">dialect</span><span class=3D"p">)</span>
+    <span class=3D"c1"># ... process CSV file contents here ...</span>
+</pre></div>
+</div>
+<p id=3D"csv-constants">The <a class=3D"reference internal" href=3D"https:/=
+/docs.python.org/3/library/csv.html#module-csv" title=3D"csv: Write and rea=
+d tabular data to and from delimited files."><code class=3D"xref py py-mod =
+docutils literal notranslate"><span class=3D"pre">csv</span></code></a> mod=
+ule defines the following constants:</p>
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_ALL">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_ALL</span>=
+</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/cs=
+v.html#csv.QUOTE_ALL" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to quote all fields.</p>
+</dd></dl>
+
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_MINIMAL">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_MINIMAL</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.QUOTE_MINIMAL" title=3D"Link to this definition">=C2=B6</a><=
+/dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to only quote those fields which contain
+special characters such as <em>delimiter</em>, <em>quotechar</em> or any of=
+ the characters in
+<em>lineterminator</em>.</p>
+</dd></dl>
+
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_NONNUMERIC">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_NONNUMERIC=
+</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/lib=
+rary/csv.html#csv.QUOTE_NONNUMERIC" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to quote all non-numeric fields.</p>
+<p>Instructs <a class=3D"reference internal" href=3D"https://docs.python.or=
+g/3/library/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">reader</span><=
+/code></a> objects to convert all non-quoted fields to type <em>float</em>.=
+</p>
+</dd></dl>
+
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_NONE">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_NONE</span=
+></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.QUOTE_NONE" title=3D"Link to this definition">=C2=B6</a></dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to never quote fields.  When the current
+<em>delimiter</em> occurs in output data it is preceded by the current <em>=
+escapechar</em>
+character.  If <em>escapechar</em> is not set, the writer will raise <a cla=
+ss=3D"reference internal" href=3D"https://docs.python.org/3/library/csv.htm=
+l#csv.Error" title=3D"csv.Error"><code class=3D"xref py py-exc docutils lit=
+eral notranslate"><span class=3D"pre">Error</span></code></a> if
+any characters that require escaping are encountered.</p>
+<p>Instructs <a class=3D"reference internal" href=3D"https://docs.python.or=
+g/3/library/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">reader</span><=
+/code></a> objects to perform no special processing of quote characters.</p=
+>
+</dd></dl>
+
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_NOTNULL">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_NOTNULL</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.QUOTE_NOTNULL" title=3D"Link to this definition">=C2=B6</a><=
+/dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to quote all fields which are not
+<code class=3D"docutils literal notranslate"><span class=3D"pre">None</span=
+></code>.  This is similar to <a class=3D"reference internal" href=3D"https=
+://docs.python.org/3/library/csv.html#csv.QUOTE_ALL" title=3D"csv.QUOTE_ALL=
+"><code class=3D"xref py py-data docutils literal notranslate"><span class=
+=3D"pre">QUOTE_ALL</span></code></a>, except that if a
+field value is <code class=3D"docutils literal notranslate"><span class=3D"=
+pre">None</span></code> an empty (unquoted) string is written.</p>
+<p>Instructs <a class=3D"reference internal" href=3D"https://docs.python.or=
+g/3/library/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">reader</span><=
+/code></a> objects to interpret an empty (unquoted) field
+as <code class=3D"docutils literal notranslate"><span class=3D"pre">None</s=
+pan></code> and to otherwise behave as <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/csv.html#csv.QUOTE_ALL" title=3D"csv.=
+QUOTE_ALL"><code class=3D"xref py py-data docutils literal notranslate"><sp=
+an class=3D"pre">QUOTE_ALL</span></code></a>.</p>
+<div class=3D"versionadded">
+<p><span class=3D"versionmodified added">Added in version 3.12.</span></p>
+</div>
+</dd></dl>
+
+<dl class=3D"py data">
+<dt class=3D"sig sig-object py" id=3D"csv.QUOTE_STRINGS">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csv.</span></=
+span><span class=3D"sig-name descname"><span class=3D"pre">QUOTE_STRINGS</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.QUOTE_STRINGS" title=3D"Link to this definition">=C2=B6</a><=
+/dt>
+<dd><p>Instructs <a class=3D"reference internal" href=3D"https://docs.pytho=
+n.org/3/library/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">writer</sp=
+an></code></a> objects to always place quotes around fields
+which are strings.  This is similar to <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/csv.html#csv.QUOTE_NONNUMERIC" title=
+=3D"csv.QUOTE_NONNUMERIC"><code class=3D"xref py py-data docutils literal n=
+otranslate"><span class=3D"pre">QUOTE_NONNUMERIC</span></code></a>, except =
+that if a
+field value is <code class=3D"docutils literal notranslate"><span class=3D"=
+pre">None</span></code> an empty (unquoted) string is written.</p>
+<p>Instructs <a class=3D"reference internal" href=3D"https://docs.python.or=
+g/3/library/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref p=
+y py-class docutils literal notranslate"><span class=3D"pre">reader</span><=
+/code></a> objects to interpret an empty (unquoted) string as <code class=
+=3D"docutils literal notranslate"><span class=3D"pre">None</span></code> an=
+d
+to otherwise behave as <a class=3D"reference internal" href=3D"https://docs=
+.python.org/3/library/csv.html#csv.QUOTE_NONNUMERIC" title=3D"csv.QUOTE_NON=
+NUMERIC"><code class=3D"xref py py-data docutils literal notranslate"><span=
+ class=3D"pre">QUOTE_NONNUMERIC</span></code></a>.</p>
+<div class=3D"versionadded">
+<p><span class=3D"versionmodified added">Added in version 3.12.</span></p>
+</div>
+</dd></dl>
+
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#module-csv" title=3D"csv: Write and read tabular data to and=
+ from delimited files."><code class=3D"xref py py-mod docutils literal notr=
+anslate"><span class=3D"pre">csv</span></code></a> module defines the follo=
+wing exception:</p>
+<dl class=3D"py exception">
+<dt class=3D"sig sig-object py" id=3D"csv.Error">
+<em class=3D"property"><span class=3D"pre">exception</span><span class=3D"w=
+"> </span></em><span class=3D"sig-prename descclassname"><span class=3D"pre=
+">csv.</span></span><span class=3D"sig-name descname"><span class=3D"pre">E=
+rror</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.Error" title=3D"Link to this definition">=C2=B6</a></=
+dt>
+<dd><p>Raised by any of the functions when an error is detected.</p>
+</dd></dl>
+
+</section>
+<section id=3D"dialects-and-formatting-parameters">
+<span id=3D"csv-fmt-params"></span><h2>Dialects and Formatting Parameters<a=
+ class=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.html#di=
+alects-and-formatting-parameters" title=3D"Link to this heading">=C2=B6</a>=
+</h2>
+<p>To make it easier to specify the format of input and output records, spe=
+cific
+formatting parameters are grouped together into dialects.  A dialect is a
+subclass of the <a class=3D"reference internal" href=3D"https://docs.python=
+.org/3/library/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"x=
+ref py py-class docutils literal notranslate"><span class=3D"pre">Dialect</=
+span></code></a> class containing various attributes
+describing the format of the CSV file.  When creating <a class=3D"reference=
+ internal" href=3D"https://docs.python.org/3/library/csv.html#csv.reader" t=
+itle=3D"csv.reader"><code class=3D"xref py py-class docutils literal notran=
+slate"><span class=3D"pre">reader</span></code></a> or
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-class do=
+cutils literal notranslate"><span class=3D"pre">writer</span></code></a> ob=
+jects, the programmer can specify a string or a subclass of
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref py py-cl=
+ass docutils literal notranslate"><span class=3D"pre">Dialect</span></code>=
+</a> class as the dialect parameter.  In addition to, or instead
+of, the <em>dialect</em> parameter, the programmer can also specify individ=
+ual
+formatting parameters, which have the same names as the attributes defined =
+below
+for the <a class=3D"reference internal" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xref py p=
+y-class docutils literal notranslate"><span class=3D"pre">Dialect</span></c=
+ode></a> class.</p>
+<p>Dialects support the following attributes:</p>
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.delimiter">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">delimiter</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.Dialect.delimiter" title=3D"Link to this definition">=C2=B6<=
+/a></dt>
+<dd><p>A one-character string used to separate fields.  It defaults to <cod=
+e class=3D"docutils literal notranslate"><span class=3D"pre">','</span></co=
+de>.</p>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.doublequote">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">doublequote<=
+/span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/libr=
+ary/csv.html#csv.Dialect.doublequote" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>Controls how instances of <em>quotechar</em> appearing inside a fiel=
+d should
+themselves be quoted.  When <a class=3D"reference internal" href=3D"https:/=
+/docs.python.org/3/library/constants.html#True" title=3D"True"><code class=
+=3D"xref py py-const docutils literal notranslate"><span class=3D"pre">True=
+</span></code></a>, the character is doubled. When
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+onstants.html#False" title=3D"False"><code class=3D"xref py py-const docuti=
+ls literal notranslate"><span class=3D"pre">False</span></code></a>, the <e=
+m>escapechar</em> is used as a prefix to the <em>quotechar</em>.  It
+defaults to <a class=3D"reference internal" href=3D"https://docs.python.org=
+/3/library/constants.html#True" title=3D"True"><code class=3D"xref py py-co=
+nst docutils literal notranslate"><span class=3D"pre">True</span></code></a=
+>.</p>
+<p>On output, if <em>doublequote</em> is <a class=3D"reference internal" hr=
+ef=3D"https://docs.python.org/3/library/constants.html#False" title=3D"Fals=
+e"><code class=3D"xref py py-const docutils literal notranslate"><span clas=
+s=3D"pre">False</span></code></a> and no <em>escapechar</em> is set,
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Error" title=3D"csv.Error"><code class=3D"xref py py-exc docuti=
+ls literal notranslate"><span class=3D"pre">Error</span></code></a> is rais=
+ed if a <em>quotechar</em> is found in a field.</p>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.escapechar">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">escapechar</=
+span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.Dialect.escapechar" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>A one-character string used by the writer to escape the <em>delimite=
+r</em> if <em>quoting</em>
+is set to <a class=3D"reference internal" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.QUOTE_NONE" title=3D"csv.QUOTE_NONE"><code class=3D"x=
+ref py py-const docutils literal notranslate"><span class=3D"pre">QUOTE_NON=
+E</span></code></a> and the <em>quotechar</em> if <em>doublequote</em> is
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+onstants.html#False" title=3D"False"><code class=3D"xref py py-const docuti=
+ls literal notranslate"><span class=3D"pre">False</span></code></a>. On rea=
+ding, the <em>escapechar</em> removes any special meaning from
+the following character. It defaults to <a class=3D"reference internal" hre=
+f=3D"https://docs.python.org/3/library/constants.html#None" title=3D"None">=
+<code class=3D"xref py py-const docutils literal notranslate"><span class=
+=3D"pre">None</span></code></a>, which disables escaping.</p>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.11: </span>=
+An empty <em>escapechar</em> is not allowed.</p>
+</div>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.lineterminator">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">lineterminat=
+or</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv.Dialect.lineterminator" title=3D"Link to this definitio=
+n">=C2=B6</a></dt>
+<dd><p>The string used to terminate lines produced by the <a class=3D"refer=
+ence internal" href=3D"https://docs.python.org/3/library/csv.html#csv.write=
+r" title=3D"csv.writer"><code class=3D"xref py py-class docutils literal no=
+translate"><span class=3D"pre">writer</span></code></a>. It defaults
+to <code class=3D"docutils literal notranslate"><span class=3D"pre">'\r\n'<=
+/span></code>.</p>
+<div class=3D"admonition note">
+<p class=3D"admonition-title">Note</p>
+<p>The <a class=3D"reference internal" href=3D"https://docs.python.org/3/li=
+brary/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref py py-c=
+lass docutils literal notranslate"><span class=3D"pre">reader</span></code>=
+</a> is hard-coded to recognise either <code class=3D"docutils literal notr=
+anslate"><span class=3D"pre">'\r'</span></code> or <code class=3D"docutils =
+literal notranslate"><span class=3D"pre">'\n'</span></code> as
+end-of-line, and ignores <em>lineterminator</em>. This behavior may change =
+in the
+future.</p>
+</div>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.quotechar">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">quotechar</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.Dialect.quotechar" title=3D"Link to this definition">=C2=B6<=
+/a></dt>
+<dd><p>A one-character string used to quote fields containing special chara=
+cters, such
+as the <em>delimiter</em> or <em>quotechar</em>, or which contain new-line =
+characters.  It
+defaults to <code class=3D"docutils literal notranslate"><span class=3D"pre=
+">'"'</span></code>.</p>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.11: </span>=
+An empty <em>quotechar</em> is not allowed.</p>
+</div>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.quoting">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">quoting</spa=
+n></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/=
+csv.html#csv.Dialect.quoting" title=3D"Link to this definition">=C2=B6</a><=
+/dt>
+<dd><p>Controls when quotes should be generated by the writer and recognise=
+d by the
+reader.  It can take on any of the <a class=3D"reference internal" href=3D"=
+https://docs.python.org/3/library/csv.html#csv-constants"><span class=3D"st=
+d std-ref">QUOTE_* constants</span></a>
+and defaults to <a class=3D"reference internal" href=3D"https://docs.python=
+.org/3/library/csv.html#csv.QUOTE_MINIMAL" title=3D"csv.QUOTE_MINIMAL"><cod=
+e class=3D"xref py py-const docutils literal notranslate"><span class=3D"pr=
+e">QUOTE_MINIMAL</span></code></a>.</p>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.skipinitialspace">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">skipinitials=
+pace</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.Dialect.skipinitialspace" title=3D"Link to this defin=
+ition">=C2=B6</a></dt>
+<dd><p>When <a class=3D"reference internal" href=3D"https://docs.python.org=
+/3/library/constants.html#True" title=3D"True"><code class=3D"xref py py-co=
+nst docutils literal notranslate"><span class=3D"pre">True</span></code></a=
+>, spaces immediately following the <em>delimiter</em> are ignored.
+The default is <a class=3D"reference internal" href=3D"https://docs.python.=
+org/3/library/constants.html#False" title=3D"False"><code class=3D"xref py =
+py-const docutils literal notranslate"><span class=3D"pre">False</span></co=
+de></a>.</p>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.Dialect.strict">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">Dialect.</spa=
+n></span><span class=3D"sig-name descname"><span class=3D"pre">strict</span=
+></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.Dialect.strict" title=3D"Link to this definition">=C2=B6</a></d=
+t>
+<dd><p>When <code class=3D"docutils literal notranslate"><span class=3D"pre=
+">True</span></code>, raise exception <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/csv.html#csv.Error" title=3D"csv.Erro=
+r"><code class=3D"xref py py-exc docutils literal notranslate"><span class=
+=3D"pre">Error</span></code></a> on bad CSV input.
+The default is <code class=3D"docutils literal notranslate"><span class=3D"=
+pre">False</span></code>.</p>
+</dd></dl>
+
+</section>
+<section id=3D"reader-objects">
+<span id=3D"id3"></span><h2>Reader Objects<a class=3D"headerlink" href=3D"h=
+ttps://docs.python.org/3/library/csv.html#reader-objects" title=3D"Link to =
+this heading">=C2=B6</a></h2>
+<p>Reader objects (<a class=3D"reference internal" href=3D"https://docs.pyt=
+hon.org/3/library/csv.html#csv.DictReader" title=3D"csv.DictReader"><code c=
+lass=3D"xref py py-class docutils literal notranslate"><span class=3D"pre">=
+DictReader</span></code></a> instances and objects returned by the
+<a class=3D"reference internal" href=3D"https://docs.python.org/3/library/c=
+sv.html#csv.reader" title=3D"csv.reader"><code class=3D"xref py py-func doc=
+utils literal notranslate"><span class=3D"pre">reader()</span></code></a> f=
+unction) have the following public methods:</p>
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.csvreader.__next__">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvreader.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">__next__</=
+span></span><span class=3D"sig-paren">(</span><span class=3D"sig-paren">)</=
+span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/csv.=
+html#csv.csvreader.__next__" title=3D"Link to this definition">=C2=B6</a></=
+dt>
+<dd><p>Return the next row of the reader=E2=80=99s iterable object as a lis=
+t (if the object
+was returned from <a class=3D"reference internal" href=3D"https://docs.pyth=
+on.org/3/library/csv.html#csv.reader" title=3D"csv.reader"><code class=3D"x=
+ref py py-func docutils literal notranslate"><span class=3D"pre">reader()</=
+span></code></a>) or a dict (if it is a <a class=3D"reference internal" hre=
+f=3D"https://docs.python.org/3/library/csv.html#csv.DictReader" title=3D"cs=
+v.DictReader"><code class=3D"xref py py-class docutils literal notranslate"=
+><span class=3D"pre">DictReader</span></code></a>
+instance), parsed according to the current <a class=3D"reference internal" =
+href=3D"https://docs.python.org/3/library/csv.html#csv.Dialect" title=3D"cs=
+v.Dialect"><code class=3D"xref py py-class docutils literal notranslate"><s=
+pan class=3D"pre">Dialect</span></code></a>.  Usually you
+should call this as <code class=3D"docutils literal notranslate"><span clas=
+s=3D"pre">next(reader)</span></code>.</p>
+</dd></dl>
+
+<p>Reader objects have the following public attributes:</p>
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.csvreader.dialect">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvreader.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">dialect</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.csvreader.dialect" title=3D"Link to this definition">=C2=B6<=
+/a></dt>
+<dd><p>A read-only description of the dialect in use by the parser.</p>
+</dd></dl>
+
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.csvreader.line_num">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvreader.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">line_num</=
+span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.csvreader.line_num" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>The number of lines read from the source iterator. This is not the s=
+ame as the
+number of records returned, as records can span multiple lines.</p>
+</dd></dl>
+
+<p>DictReader objects have the following public attribute:</p>
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.DictReader.fieldnames">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">DictReader.</=
+span></span><span class=3D"sig-name descname"><span class=3D"pre">fieldname=
+s</span></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/li=
+brary/csv.html#csv.DictReader.fieldnames" title=3D"Link to this definition"=
+>=C2=B6</a></dt>
+<dd><p>If not passed as a parameter when creating the object, this attribut=
+e is
+initialized upon first access or when the first record is read from the
+file.</p>
+</dd></dl>
+
+</section>
+<section id=3D"writer-objects">
+<h2>Writer Objects<a class=3D"headerlink" href=3D"https://docs.python.org/3=
+/library/csv.html#writer-objects" title=3D"Link to this heading">=C2=B6</a>=
+</h2>
+<p><a class=3D"reference internal" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-class=
+ docutils literal notranslate"><span class=3D"pre">writer</span></code></a>=
+ objects (<a class=3D"reference internal" href=3D"https://docs.python.org/3=
+/library/csv.html#csv.DictWriter" title=3D"csv.DictWriter"><code class=3D"x=
+ref py py-class docutils literal notranslate"><span class=3D"pre">DictWrite=
+r</span></code></a> instances and objects returned by
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.writer" title=3D"csv.writer"><code class=3D"xref py py-func=
+ docutils literal notranslate"><span class=3D"pre">writer()</span></code></=
+a> function) have the following public methods.  A <em>row</em> must be
+an iterable of strings or numbers for <a class=3D"reference internal" href=
+=3D"https://docs.python.org/3/library/csv.html#csv.writer" title=3D"csv.wri=
+ter"><code class=3D"xref py py-class docutils literal notranslate"><span cl=
+ass=3D"pre">writer</span></code></a> objects and a dictionary
+mapping fieldnames to strings or numbers (by passing them through <a class=
+=3D"reference internal" href=3D"https://docs.python.org/3/library/stdtypes.=
+html#str" title=3D"str"><code class=3D"xref py py-func docutils literal not=
+ranslate"><span class=3D"pre">str()</span></code></a>
+first) for <a class=3D"reference internal" href=3D"https://docs.python.org/=
+3/library/csv.html#csv.DictWriter" title=3D"csv.DictWriter"><code class=3D"=
+xref py py-class docutils literal notranslate"><span class=3D"pre">DictWrit=
+er</span></code></a> objects.  Note that complex numbers are written
+out surrounded by parens. This may cause some problems for other programs w=
+hich
+read CSV files (assuming they support complex numbers at all).</p>
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.csvwriter.writerow">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvwriter.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">writerow</=
+span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param"><span=
+ class=3D"n"><span class=3D"pre">row</span></span></em><span class=3D"sig-p=
+aren">)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/lib=
+rary/csv.html#csv.csvwriter.writerow" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>Write the <em>row</em> parameter to the writer=E2=80=99s file object=
+, formatted according
+to the current <a class=3D"reference internal" href=3D"https://docs.python.=
+org/3/library/csv.html#csv.Dialect" title=3D"csv.Dialect"><code class=3D"xr=
+ef py py-class docutils literal notranslate"><span class=3D"pre">Dialect</s=
+pan></code></a>. Return the return value of the call to the
+<em>write</em> method of the underlying file object.</p>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.5: </span>A=
+dded support of arbitrary iterables.</p>
+</div>
+</dd></dl>
+
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.csvwriter.writerows">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvwriter.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">writerows<=
+/span></span><span class=3D"sig-paren">(</span><em class=3D"sig-param"><spa=
+n class=3D"n"><span class=3D"pre">rows</span></span></em><span class=3D"sig=
+-paren">)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/l=
+ibrary/csv.html#csv.csvwriter.writerows" title=3D"Link to this definition">=
+=C2=B6</a></dt>
+<dd><p>Write all elements in <em>rows</em> (an iterable of <em>row</em> obj=
+ects as described
+above) to the writer=E2=80=99s file object, formatted according to the curr=
+ent
+dialect.</p>
+</dd></dl>
+
+<p>Writer objects have the following public attribute:</p>
+<dl class=3D"py attribute">
+<dt class=3D"sig sig-object py" id=3D"csv.csvwriter.dialect">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">csvwriter.</s=
+pan></span><span class=3D"sig-name descname"><span class=3D"pre">dialect</s=
+pan></span><a class=3D"headerlink" href=3D"https://docs.python.org/3/librar=
+y/csv.html#csv.csvwriter.dialect" title=3D"Link to this definition">=C2=B6<=
+/a></dt>
+<dd><p>A read-only description of the dialect in use by the writer.</p>
+</dd></dl>
+
+<p>DictWriter objects have the following public method:</p>
+<dl class=3D"py method">
+<dt class=3D"sig sig-object py" id=3D"csv.DictWriter.writeheader">
+<span class=3D"sig-prename descclassname"><span class=3D"pre">DictWriter.</=
+span></span><span class=3D"sig-name descname"><span class=3D"pre">writehead=
+er</span></span><span class=3D"sig-paren">(</span><span class=3D"sig-paren"=
+>)</span><a class=3D"headerlink" href=3D"https://docs.python.org/3/library/=
+csv.html#csv.DictWriter.writeheader" title=3D"Link to this definition">=C2=
+=B6</a></dt>
+<dd><p>Write a row with the field names (as specified in the constructor) t=
+o
+the writer=E2=80=99s file object, formatted according to the current dialec=
+t. Return
+the return value of the <a class=3D"reference internal" href=3D"https://doc=
+s.python.org/3/library/csv.html#csv.csvwriter.writerow" title=3D"csv.csvwri=
+ter.writerow"><code class=3D"xref py py-meth docutils literal notranslate">=
+<span class=3D"pre">csvwriter.writerow()</span></code></a> call used intern=
+ally.</p>
+<div class=3D"versionadded">
+<p><span class=3D"versionmodified added">Added in version 3.2.</span></p>
+</div>
+<div class=3D"versionchanged">
+<p><span class=3D"versionmodified changed">Changed in version 3.8: </span><=
+a class=3D"reference internal" href=3D"https://docs.python.org/3/library/cs=
+v.html#csv.DictWriter.writeheader" title=3D"csv.DictWriter.writeheader"><co=
+de class=3D"xref py py-meth docutils literal notranslate"><span class=3D"pr=
+e">writeheader()</span></code></a> now also returns the value returned by
+the <a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#csv.csvwriter.writerow" title=3D"csv.csvwriter.writerow"><code =
+class=3D"xref py py-meth docutils literal notranslate"><span class=3D"pre">=
+csvwriter.writerow()</span></code></a> method it uses internally.</p>
+</div>
+</dd></dl>
+
+</section>
+<section id=3D"examples">
+<span id=3D"csv-examples"></span><h2>Examples<a class=3D"headerlink" href=
+=3D"https://docs.python.org/3/library/csv.html#examples" title=3D"Link to t=
+his heading">=C2=B6</a></h2>
+<p>The simplest example of reading a CSV file:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'some.csv'</span><span class=3D"p">,</span> <=
+span class=3D"n">newline</span><span class=3D"o">=3D</span><span class=3D"s=
+1">''</span><span class=3D"p">)</span> <span class=3D"k">as</span> <span cl=
+ass=3D"n">f</span><span class=3D"p">:</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">)</sp=
+an>
+    <span class=3D"k">for</span> <span class=3D"n">row</span> <span class=
+=3D"ow">in</span> <span class=3D"n">reader</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">row</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>Reading a file with an alternate format:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'passwd'</span><span class=3D"p">,</span> <sp=
+an class=3D"n">newline</span><span class=3D"o">=3D</span><span class=3D"s1"=
+>''</span><span class=3D"p">)</span> <span class=3D"k">as</span> <span clas=
+s=3D"n">f</span><span class=3D"p">:</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">,</sp=
+an> <span class=3D"n">delimiter</span><span class=3D"o">=3D</span><span cla=
+ss=3D"s1">':'</span><span class=3D"p">,</span> <span class=3D"n">quoting</s=
+pan><span class=3D"o">=3D</span><span class=3D"n">csv</span><span class=3D"=
+o">.</span><span class=3D"n">QUOTE_NONE</span><span class=3D"p">)</span>
+    <span class=3D"k">for</span> <span class=3D"n">row</span> <span class=
+=3D"ow">in</span> <span class=3D"n">reader</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">row</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>The corresponding simplest possible writing example is:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'some.csv'</span><span class=3D"p">,</span> <=
+span class=3D"s1">'w'</span><span class=3D"p">,</span> <span class=3D"n">ne=
+wline</span><span class=3D"o">=3D</span><span class=3D"s1">''</span><span c=
+lass=3D"p">)</span> <span class=3D"k">as</span> <span class=3D"n">f</span><=
+span class=3D"p">:</span>
+    <span class=3D"n">writer</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">writer</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">)</sp=
+an>
+    <span class=3D"n">writer</span><span class=3D"o">.</span><span class=3D=
+"n">writerows</span><span class=3D"p">(</span><span class=3D"n">someiterabl=
+e</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>Since <a class=3D"reference internal" href=3D"https://docs.python.org/3/=
+library/functions.html#open" title=3D"open"><code class=3D"xref py py-func =
+docutils literal notranslate"><span class=3D"pre">open()</span></code></a> =
+is used to open a CSV file for reading, the file
+will by default be decoded into unicode using the system default
+encoding (see <a class=3D"reference internal" href=3D"https://docs.python.o=
+rg/3/library/locale.html#locale.getencoding" title=3D"locale.getencoding"><=
+code class=3D"xref py py-func docutils literal notranslate"><span class=3D"=
+pre">locale.getencoding()</span></code></a>).  To decode a file
+using a different encoding, use the <code class=3D"docutils literal notrans=
+late"><span class=3D"pre">encoding</span></code> argument of open:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'some.csv'</span><span class=3D"p">,</span> <=
+span class=3D"n">newline</span><span class=3D"o">=3D</span><span class=3D"s=
+1">''</span><span class=3D"p">,</span> <span class=3D"n">encoding</span><sp=
+an class=3D"o">=3D</span><span class=3D"s1">'utf-8'</span><span class=3D"p"=
+>)</span> <span class=3D"k">as</span> <span class=3D"n">f</span><span class=
+=3D"p">:</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">)</sp=
+an>
+    <span class=3D"k">for</span> <span class=3D"n">row</span> <span class=
+=3D"ow">in</span> <span class=3D"n">reader</span><span class=3D"p">:</span>
+        <span class=3D"nb">print</span><span class=3D"p">(</span><span clas=
+s=3D"n">row</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>The same applies to writing in something other than the system default
+encoding: specify the encoding argument when opening the output file.</p>
+<p>Registering a new dialect:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reg=
+ister_dialect</span><span class=3D"p">(</span><span class=3D"s1">'unixpwd'<=
+/span><span class=3D"p">,</span> <span class=3D"n">delimiter</span><span cl=
+ass=3D"o">=3D</span><span class=3D"s1">':'</span><span class=3D"p">,</span>=
+ <span class=3D"n">quoting</span><span class=3D"o">=3D</span><span class=3D=
+"n">csv</span><span class=3D"o">.</span><span class=3D"n">QUOTE_NONE</span>=
+<span class=3D"p">)</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"s1">'passwd'</span><span class=3D"p">,</span> <sp=
+an class=3D"n">newline</span><span class=3D"o">=3D</span><span class=3D"s1"=
+>''</span><span class=3D"p">)</span> <span class=3D"k">as</span> <span clas=
+s=3D"n">f</span><span class=3D"p">:</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">,</sp=
+an> <span class=3D"s1">'unixpwd'</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p>A slightly more advanced use of the reader =E2=80=94 catching and report=
+ing errors:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span><span class=3D"o">,</span> <span class=3D"nn"=
+>sys</span>
+<span class=3D"n">filename</span> <span class=3D"o">=3D</span> <span class=
+=3D"s1">'some.csv'</span>
+<span class=3D"k">with</span> <span class=3D"nb">open</span><span class=3D"=
+p">(</span><span class=3D"n">filename</span><span class=3D"p">,</span> <spa=
+n class=3D"n">newline</span><span class=3D"o">=3D</span><span class=3D"s1">=
+''</span><span class=3D"p">)</span> <span class=3D"k">as</span> <span class=
+=3D"n">f</span><span class=3D"p">:</span>
+    <span class=3D"n">reader</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">csv</span><span class=3D"o">.</span><span class=3D"n">reader</span>=
+<span class=3D"p">(</span><span class=3D"n">f</span><span class=3D"p">)</sp=
+an>
+    <span class=3D"k">try</span><span class=3D"p">:</span>
+        <span class=3D"k">for</span> <span class=3D"n">row</span> <span cla=
+ss=3D"ow">in</span> <span class=3D"n">reader</span><span class=3D"p">:</spa=
+n>
+            <span class=3D"nb">print</span><span class=3D"p">(</span><span =
+class=3D"n">row</span><span class=3D"p">)</span>
+    <span class=3D"k">except</span> <span class=3D"n">csv</span><span class=
+=3D"o">.</span><span class=3D"n">Error</span> <span class=3D"k">as</span> <=
+span class=3D"n">e</span><span class=3D"p">:</span>
+        <span class=3D"n">sys</span><span class=3D"o">.</span><span class=
+=3D"n">exit</span><span class=3D"p">(</span><span class=3D"s1">'file </span=
+><span class=3D"si">{}</span><span class=3D"s1">, line </span><span class=
+=3D"si">{}</span><span class=3D"s1">: </span><span class=3D"si">{}</span><s=
+pan class=3D"s1">'</span><span class=3D"o">.</span><span class=3D"n">format=
+</span><span class=3D"p">(</span><span class=3D"n">filename</span><span cla=
+ss=3D"p">,</span> <span class=3D"n">reader</span><span class=3D"o">.</span>=
+<span class=3D"n">line_num</span><span class=3D"p">,</span> <span class=3D"=
+n">e</span><span class=3D"p">))</span>
+</pre></div>
+</div>
+<p>And while the module doesn=E2=80=99t directly support parsing strings, i=
+t can easily be
+done:</p>
+<div class=3D"highlight-python3 notranslate"><div class=3D"highlight" style=
+=3D"position: relative;"><pre><span></span><span class=3D"kn">import</span>=
+ <span class=3D"nn">csv</span>
+<span class=3D"k">for</span> <span class=3D"n">row</span> <span class=3D"ow=
+">in</span> <span class=3D"n">csv</span><span class=3D"o">.</span><span cla=
+ss=3D"n">reader</span><span class=3D"p">([</span><span class=3D"s1">'one,tw=
+o,three'</span><span class=3D"p">]):</span>
+    <span class=3D"nb">print</span><span class=3D"p">(</span><span class=3D=
+"n">row</span><span class=3D"p">)</span>
+</pre></div>
+</div>
+<p class=3D"rubric">Footnotes</p>
+<aside class=3D"footnote-list brackets">
+<aside class=3D"footnote brackets" id=3D"id4" role=3D"doc-footnote">
+<span class=3D"label"><span class=3D"fn-bracket">[</span>1<span class=3D"fn=
+-bracket">]</span></span>
+<span class=3D"backrefs">(<a role=3D"doc-backlink" href=3D"https://docs.pyt=
+hon.org/3/library/csv.html#id1">1</a>,<a role=3D"doc-backlink" href=3D"http=
+s://docs.python.org/3/library/csv.html#id2">2</a>)</span>
+<p>If <code class=3D"docutils literal notranslate"><span class=3D"pre">newl=
+ine=3D''</span></code> is not specified, newlines embedded inside quoted fi=
+elds
+will not be interpreted correctly, and on platforms that use <code class=3D=
+"docutils literal notranslate"><span class=3D"pre">\r\n</span></code> linen=
+dings
+on write an extra <code class=3D"docutils literal notranslate"><span class=
+=3D"pre">\r</span></code> will be added.  It should always be safe to speci=
+fy
+<code class=3D"docutils literal notranslate"><span class=3D"pre">newline=3D=
+''</span></code>, since the csv module does its own
+(<a class=3D"reference internal" href=3D"https://docs.python.org/3/glossary=
+.html#term-universal-newlines"><span class=3D"xref std std-term">universal<=
+/span></a>) newline handling.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+            <div class=3D"clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class=3D"sphinxsidebar" role=3D"navigation" aria-label=3D"main n=
+avigation">
+        <div class=3D"sphinxsidebarwrapper">
+  <div>
+    <h3><a href=3D"https://docs.python.org/3/contents.html">Table of Conten=
+ts</a></h3>
+    <ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#"><code class=3D"xref py py-mod docutils literal notranslate"><=
+span class=3D"pre">csv</span></code> =E2=80=94 CSV File Reading and Writing=
+</a><ul>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#module-contents">Module Contents</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#dialects-and-formatting-parameters">Dialects and Formatting Par=
+ameters</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#reader-objects">Reader Objects</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#writer-objects">Writer Objects</a></li>
+<li><a class=3D"reference internal" href=3D"https://docs.python.org/3/libra=
+ry/csv.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/library/filef=
+ormats.html" title=3D"previous chapter">File Formats</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class=3D"topless"><a href=3D"https://docs.python.org/3/library/confi=
+gparser.html" title=3D"next chapter"><code class=3D"xref py py-mod docutils=
+ literal notranslate"><span class=3D"pre">configparser</span></code> =E2=80=
+=94 Configuration file parser</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://docs.python.org/3/bugs.html">Report a Bug</a><=
+/li>
+      <li>
+        <a href=3D"https://github.com/python/cpython/blob/main/Doc/library/=
+csv.rst" rel=3D"nofollow">Show Source
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+<div id=3D"sidebarbutton" title=3D"Collapse sidebar">
+<span>=C2=AB</span>
+</div>
+
+      </div>
+      <div class=3D"clearer"></div>
+    </div> =20
+    <div class=3D"related" role=3D"navigation" aria-label=3D"related naviga=
+tion">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://docs.python.org/3/genindex.html" title=3D"Gene=
+ral Index">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/py-modindex.html" title=3D"P=
+ython Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/library/configparser.html" t=
+itle=3D"configparser =E2=80=94 Configuration file parser">next</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://docs.python.org/3/library/fileformats.html" ti=
+tle=3D"File Formats">previous</a> |</li>
+
+          <li><img src=3D"https://docs.python.org/3/_static/py.svg" alt=3D"=
+Python logo" style=3D"vertical-align: middle; margin-top: -1px"></li>
+          <li><a href=3D"https://www.python.org/">Python</a> =C2=BB</li>
+          <li class=3D"switchers">
+            <div class=3D"language_switcher_placeholder"><select id=3D"lang=
+uage_select"><option value=3D"en" selected=3D"selected">English</option><op=
+tion value=3D"es">Spanish</option><option value=3D"fr">French</option><opti=
+on value=3D"it">Italian</option><option value=3D"ja">Japanese</option><opti=
+on value=3D"ko">Korean</option><option value=3D"pt-br">Brazilian Portuguese=
+</option><option value=3D"tr">Turkish</option><option value=3D"zh-cn">Simpl=
+ified Chinese</option><option value=3D"zh-tw">Traditional Chinese</option><=
+/select></div>
+            <div class=3D"version_switcher_placeholder"><select id=3D"versi=
+on_select"><option value=3D"3.14">dev (3.14)</option><option value=3D"3.13"=
+>pre (3.13)</option><option value=3D"3.12" selected=3D"selected">3.12.4</op=
+tion><option value=3D"3.11">3.11</option><option value=3D"3.10">3.10</optio=
+n><option value=3D"3.9">3.9</option><option value=3D"3.8">3.8</option><opti=
+on value=3D"3.7">3.7</option><option value=3D"3.6">3.6</option><option valu=
+e=3D"3.5">3.5</option><option value=3D"3.4">3.4</option><option value=3D"3.=
+3">3.3</option><option value=3D"3.2">3.2</option><option value=3D"3.1">3.1<=
+/option><option value=3D"3.0">3.0</option><option value=3D"2.7">2.7</option=
+><option value=3D"2.6">2.6</option></select></div>
+          </li>
+          <li>
+             =20
+          </li>
+    <li id=3D"cpython-language-and-version">
+      <a href=3D"https://docs.python.org/3/index.html">3.12.4 Documentation=
+</a> =C2=BB
+    </li>
+
+          <li class=3D"nav-item nav-item-1"><a href=3D"https://docs.python.=
+org/3/library/index.html">The Python Standard Library</a> =C2=BB</li>
+          <li class=3D"nav-item nav-item-2"><a href=3D"https://docs.python.=
+org/3/library/fileformats.html">File Formats</a> =C2=BB</li>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://docs.python=
+.org/3/library/csv.html"><code class=3D"xref py py-mod docutils literal not=
+ranslate"><span class=3D"pre">csv</span></code> =E2=80=94 CSV File Reading =
+and Writing</a></li>
+                <li class=3D"right">
+                   =20
+
+    <div class=3D"inline-search" role=3D"search">
+        <form class=3D"inline-search" action=3D"https://docs.python.org/3/s=
+earch.html" method=3D"get">
+          <input placeholder=3D"Quick search" aria-label=3D"Quick search" t=
+ype=3D"search" name=3D"q" id=3D"search-box">
+          <input type=3D"submit" value=3D"Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class=3D"right">
+<label class=3D"theme-selector-label">
+    Theme
+    <select class=3D"theme-selector">
+        <option value=3D"auto" selected=3D"">Auto</option>
+        <option value=3D"light">Light</option>
+        <option value=3D"dark">Dark</option>
+    </select>
+</label> |</li>
+           =20
+      </ul>
+    </div> =20
+    <div class=3D"footer">
+    =C2=A9=20
+      <a href=3D"https://docs.python.org/3/copyright.html">
+   =20
+    Copyright
+   =20
+      </a>
+     2001-2024, Python Software Foundation.
+    <br>
+    This page is licensed under the Python Software Foundation License Vers=
+ion 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally=
+ licensed under the Zero Clause BSD License.
+    <br>
+   =20
+      See <a href=3D"https://docs.python.org/license.html">History and Lice=
+nse</a> for more information.<br>
+   =20
+   =20
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href=3D"https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+      Last updated on Jul 05, 2024 (12:55 UTC).
+   =20
+      <a href=3D"https://docs.python.org/bugs.html">Found a bug</a>?
+   =20
+    <br>
+
+    Created using <a href=3D"https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+
+   =20
+ =20
+</body><grammarly-desktop-integration data-grammarly-shadow-root=3D"true"><=
+template shadowmode=3D"open"><div aria-label=3D"grammarly-integration" role=
+=3D"group" tabindex=3D"-1" class=3D"grammarly-desktop-integration" data-con=
+tent=3D"{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;=
+isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integrati=
+on></html>
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-1f423888-95ed-4f28-b542-51707c0a9602@mhtml.blink
+
+@charset "utf-8";
+
+@media only screen {
+  table.full-width-table { width: 100%; }
+}
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pygments.css?v=80d5e7a1
+
+@charset "utf-8";
+
+pre { line-height: 125%; }
+
+td.linenos .normal { color: inherit; background-color: transparent; padding=
+-left: 5px; padding-right: 5px; }
+
+span.linenos { color: inherit; background-color: transparent; padding-left:=
+ 5px; padding-right: 5px; }
+
+td.linenos .special { color: rgb(0, 0, 0); background-color: rgb(255, 255, =
+192); padding-left: 5px; padding-right: 5px; }
+
+span.linenos.special { color: rgb(0, 0, 0); background-color: rgb(255, 255,=
+ 192); padding-left: 5px; padding-right: 5px; }
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(248, 248, 248); }
+
+.highlight .c { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cm { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cp { color: rgb(156, 101, 0); }
+
+.highlight .cpf { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .c1 { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .cs { color: rgb(61, 123, 123); font-style: italic; }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .ges { font-weight: bold; font-style: italic; }
+
+.highlight .gr { color: rgb(228, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 132, 0); }
+
+.highlight .go { color: rgb(113, 113, 113); }
+
+.highlight .gp { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 128, 0); }
+
+.highlight .kr { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .kt { color: rgb(176, 0, 64); }
+
+.highlight .m { color: rgb(102, 102, 102); }
+
+.highlight .s { color: rgb(186, 33, 33); }
+
+.highlight .na { color: rgb(104, 120, 34); }
+
+.highlight .nb { color: rgb(0, 128, 0); }
+
+.highlight .nc { color: rgb(0, 0, 255); font-weight: bold; }
+
+.highlight .no { color: rgb(136, 0, 0); }
+
+.highlight .nd { color: rgb(170, 34, 255); }
+
+.highlight .ni { color: rgb(113, 113, 113); font-weight: bold; }
+
+.highlight .ne { color: rgb(203, 63, 56); font-weight: bold; }
+
+.highlight .nf { color: rgb(0, 0, 255); }
+
+.highlight .nl { color: rgb(118, 118, 0); }
+
+.highlight .nn { color: rgb(0, 0, 255); font-weight: bold; }
+
+.highlight .nt { color: rgb(0, 128, 0); font-weight: bold; }
+
+.highlight .nv { color: rgb(25, 23, 124); }
+
+.highlight .ow { color: rgb(170, 34, 255); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(102, 102, 102); }
+
+.highlight .mf { color: rgb(102, 102, 102); }
+
+.highlight .mh { color: rgb(102, 102, 102); }
+
+.highlight .mi { color: rgb(102, 102, 102); }
+
+.highlight .mo { color: rgb(102, 102, 102); }
+
+.highlight .sa { color: rgb(186, 33, 33); }
+
+.highlight .sb { color: rgb(186, 33, 33); }
+
+.highlight .sc { color: rgb(186, 33, 33); }
+
+.highlight .dl { color: rgb(186, 33, 33); }
+
+.highlight .sd { color: rgb(186, 33, 33); font-style: italic; }
+
+.highlight .s2 { color: rgb(186, 33, 33); }
+
+.highlight .se { color: rgb(170, 93, 31); font-weight: bold; }
+
+.highlight .sh { color: rgb(186, 33, 33); }
+
+.highlight .si { color: rgb(164, 90, 119); font-weight: bold; }
+
+.highlight .sx { color: rgb(0, 128, 0); }
+
+.highlight .sr { color: rgb(164, 90, 119); }
+
+.highlight .s1 { color: rgb(186, 33, 33); }
+
+.highlight .ss { color: rgb(25, 23, 124); }
+
+.highlight .bp { color: rgb(0, 128, 0); }
+
+.highlight .fm { color: rgb(0, 0, 255); }
+
+.highlight .vc { color: rgb(25, 23, 124); }
+
+.highlight .vg { color: rgb(25, 23, 124); }
+
+.highlight .vi { color: rgb(25, 23, 124); }
+
+.highlight .vm { color: rgb(25, 23, 124); }
+
+.highlight .il { color: rgb(102, 102, 102); }
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pydoctheme.css?v=41b4f12d
+
+@charset "utf-8";
+
+@import url("classic.css");
+
+:root { --good-color: rgb(41 100 51); --good-border: rgb(79 196 100); --mid=
+dle-color: rgb(133 72 38); --middle-border: rgb(244, 227, 76); --bad-color:=
+ rgb(159 49 51); --bad-border: rgb(244, 76, 78); }
+
+div.document, div.body, div.related, div.body h1, div.body h2, div.body h3,=
+ div.body h4, div.body h5, div.body h6, div.sphinxsidebar a, div.sphinxside=
+bar p, div.sphinxsidebar ul, div.sphinxsidebar h3, div.sphinxsidebar h3 a, =
+div.sphinxsidebar h4, .menu a, .menu p, .menu ul, .menu h3, .menu h3 a, .me=
+nu h4, table.docutils td, table.indextable tr.cap, pre { background-color: =
+inherit; color: inherit; }
+
+a[href] { text-decoration: underline 1px; }
+
+a[href]:has(> code) { text-underline-offset: 0.25em; }
+
+a.headerlink, div.genindex-jumpbox a, div.modindex-jumpbox a, div#search-re=
+sults a, div.sphinxsidebar a, div.toctree-wrapper a, div[role=3D"navigation=
+"] a, table.contentstable a, table.indextable a { text-decoration: none; }
+
+div.genindex-jumpbox a:hover, div.modindex-jumpbox a:hover, div#search-resu=
+lts a:hover, div.sphinxsidebar a:hover, div.toctree-wrapper a:hover, div[ro=
+le=3D"navigation"] a:hover, table.contentstable a:hover, table.indextable a=
+:hover { text-decoration: underline; text-underline-offset: auto; }
+
+body { margin-left: 1em; margin-right: 1em; }
+
+.mobile-nav, .menu-wrapper { display: none; }
+
+div.related { margin-top: 0.5em; margin-bottom: 1.2em; padding: 0.5em 0px; =
+border-width: 1px; border-color: rgb(204, 204, 204); }
+
+.mobile-nav + div.related { border-bottom-style: solid; }
+
+.document + div.related { border-top-style: solid; }
+
+div.related a:hover { color: rgb(0, 149, 196); }
+
+.related .switchers { display: inline-flex; }
+
+.switchers > div { margin-right: 5px; }
+
+div.related ul::after { content: ""; clear: both; display: block; }
+
+.inline-search, form.inline-search input { display: inline; }
+
+form.inline-search input[type=3D"submit"] { width: 40px; }
+
+div.document { display: flex; overflow-wrap: break-word; }
+
+span.pre { white-space: unset; }
+
+div.sphinxsidebar { float: none; position: sticky; top: 0px; max-height: 10=
+0vh; color: rgb(68, 68, 68); background-color: rgb(238, 238, 238); border-r=
+adius: 5px; line-height: 130%; font-size: smaller; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 { margin-top: 1.5em; }
+
+div.sphinxsidebarwrapper { width: 217px; box-sizing: border-box; height: 10=
+0%; overflow: hidden auto; float: left; }
+
+div.sphinxsidebarwrapper > h3:first-child { margin-top: 0.2em; }
+
+div.sphinxsidebarwrapper > ul > li > ul > li { margin-bottom: 0.4em; }
+
+div.sphinxsidebar a:hover { color: rgb(0, 149, 196); }
+
+form.inline-search input, div.sphinxsidebar input, div.related input { font=
+-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "segoe u=
+i", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto, arial, sa=
+ns-serif; border: 1px solid rgb(153, 153, 153); font-size: smaller; border-=
+radius: 3px; }
+
+div.sphinxsidebar input[type=3D"text"] { max-width: 150px; }
+
+#sidebarbutton { height: 100%; background-color: rgb(204, 204, 204); margin=
+-left: 0px; color: rgb(68, 68, 68); font-size: 1.2em; cursor: pointer; padd=
+ing-top: 1px; float: right; display: table; width: 12px; border-radius: 0px=
+ 5px 5px 0px; border-left: none; }
+
+#sidebarbutton span { display: table-cell; vertical-align: middle; }
+
+#sidebarbutton:hover { background-color: rgb(170, 170, 170); }
+
+div.body { padding: 0px 0px 0px 1.2em; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { text-align: lef=
+t; line-height: 1.6; }
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h=
+6 { margin: 0px; border: 0px; padding: 0.3em 0px; }
+
+div.body hr { border: 0px; background-color: rgb(204, 204, 204); height: 1p=
+x; }
+
+div.body pre { border-radius: 3px; border: 1px solid rgb(170, 204, 153); }
+
+:root { --admonition-background: #eee; --admonition-border: #ccc; --admonit=
+ion-color: black; --attention-background: #bbddff5c; --attention-border: #0=
+000ff36; --caution-background: #ffc; --caution-border: #dd6; --danger-backg=
+round: #ffe4e4; --danger-border: red; --error-background: #ffe4e4; --error-=
+border: red; --hint-background: #dfd; --hint-border: green; --seealso-backg=
+round: #ffc; --seealso-border: #dd6; --tip-background: #dfd; --tip-border: =
+green; --warning-background: #ffe4e4; --warning-border: red; }
+
+div.body div.admonition { background-color: var(--admonition-background); b=
+order: 1px solid var(--admonition-border); border-radius: 3px; color: var(-=
+-admonition-color); }
+
+div.body div.admonition.attention { background-color: var(--attention-backg=
+round); border-color: var(--attention-border); }
+
+div.body div.admonition.caution { background-color: var(--caution-backgroun=
+d); border-color: var(--caution-border); }
+
+div.body div.admonition.danger { background-color: var(--danger-background)=
+; border-color: var(--danger-border); }
+
+div.body div.admonition.error { background-color: var(--error-background); =
+border-color: var(--error-border); }
+
+div.body div.admonition.hint { background-color: var(--hint-background); bo=
+rder-color: var(--hint-border); }
+
+div.body div.admonition.seealso { background-color: var(--seealso-backgroun=
+d); border-color: var(--seealso-border); }
+
+div.body div.admonition.tip { background-color: var(--tip-background); bord=
+er-color: var(--tip-border); }
+
+div.body div.admonition.warning { background-color: var(--warning-backgroun=
+d); border-color: var(--warning-border); }
+
+div.body div.impl-detail { border-radius: 3px; }
+
+div.body div.impl-detail > p { margin: 0px; }
+
+div.body a { color: rgb(0, 114, 170); }
+
+div.body a:visited { color: rgb(99, 99, 187); }
+
+div.body a:hover { color: rgb(0, 176, 228); }
+
+tt, code, pre { font-family: Menlo, Consolas, Monaco, "Liberation Mono", "L=
+ucida Console", monospace; font-size: 96.5%; }
+
+div.body tt, div.body code { border-radius: 3px; }
+
+div.body tt.descname, div.body code.descname { font-size: 120%; }
+
+div.body tt.xref, div.body a tt, div.body code.xref, div.body a code { font=
+-weight: normal; }
+
+table.docutils { border: 1px solid rgb(221, 221, 221); min-width: 20%; bord=
+er-radius: 3px; margin-top: 10px; margin-bottom: 10px; }
+
+table.docutils td, table.docutils th { border-radius: 3px; padding: 0.3em 0=
+.5em; border: 1px solid rgb(221, 221, 221) !important; }
+
+table p, table li { text-align: left !important; }
+
+table.docutils th { background-color: rgb(238, 238, 238); }
+
+table.footnote, table.footnote td { border: 0px !important; }
+
+div.footer { line-height: 150%; text-align: right; width: auto; margin-righ=
+t: 10px; }
+
+div.footer a { text-underline-offset: auto; }
+
+div.footer a:hover { color: rgb(0, 149, 196); }
+
+:root { --refcount: var(--good-color); --refcount-return-borrowed-ref: var(=
+--middle-color); }
+
+.refcount { color: var(--refcount); }
+
+.refcount.return_borrowed_ref { color: var(--refcount-return-borrowed-ref);=
+ }
+
+.stableabi { color: rgb(34, 34, 153); }
+
+dl > dt span ~ em, .sig { font-family: Menlo, Consolas, Monaco, "Liberation=
+ Mono", "Lucida Console", monospace; }
+
+.toctree-wrapper ul { padding-left: 20px; }
+
+.theme-selector { margin-left: 0.5em; }
+
+div.genindex-jumpbox, div.genindex-jumpbox > p { display: inline-flex; flex=
+-wrap: wrap; }
+
+div.genindex-jumpbox a { margin: 0px 5px; min-width: 30px; text-align: cent=
+er; }
+
+.copybutton { cursor: pointer; position: absolute; top: 0px; right: 0px; fo=
+nt-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", mo=
+nospace; padding-left: 0.2em; padding-right: 0.2em; border-radius: 0px 3px =
+0px 0px; color: rgb(170, 204, 153); border-color: rgb(170, 204, 153); borde=
+r-style: solid; border-width: 1px; }
+
+.copybutton[data-hidden=3D"true"] { text-decoration: line-through; }
+
+@media (max-width: 1023px) {
+  div.body { min-width: 100%; padding: 0px; font-size: 0.875rem; }
+  div.bodywrapper { margin: 0px; }
+  div.body h1 { font-size: 1.625rem; }
+  div.body h2 { font-size: 1.25rem; }
+  div.body h3, div.body h4, div.body h5 { font-size: 1rem; }
+  div.body ul { padding-inline-start: 1rem; }
+  div.body blockquote { margin-inline: 1rem 0px; }
+  div.related, .sphinxsidebar { display: none; }
+  html { scroll-padding-top: 40px; }
+  body { margin-top: 40px; }
+  .mobile-nav { display: block; height: 40px; width: 100%; position: fixed;=
+ top: 0px; left: 0px; box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 2px 0px; z-in=
+dex: 1; }
+  .mobile-nav * { box-sizing: border-box; }
+  .nav-content { position: absolute; z-index: 1; height: 40px; width: 100%;=
+ display: flex; background-color: white; }
+  .nav-items-wrapper { display: flex; flex: 1 1 auto; padding: 0.25rem; ali=
+gn-items: stretch; }
+  .nav-logo { margin-right: 1rem; flex-shrink: 0; align-self: center; }
+  .nav-content img { display: block; width: 20px; }
+  .version_switcher_placeholder { margin-right: 1rem; }
+  .version_switcher_placeholder > select { height: 100%; }
+  .nav-content .search { display: flex; flex: 1 1 auto; border: 1px solid r=
+gb(169, 169, 169); align-items: stretch; }
+  .nav-content .search input[type=3D"search"] { border: 0px; padding-left: =
+24px; width: 100%; flex: 1 1 0%; }
+  .nav-content .search input[type=3D"submit"] { height: 100%; box-shadow: n=
+one; border-width: 0px 0px 0px 1px; border-top-style: initial; border-right=
+-style: initial; border-bottom-style: initial; border-top-color: initial; b=
+order-right-color: initial; border-bottom-color: initial; border-image: ini=
+tial; border-left-style: solid; border-left-color: rgb(169, 169, 169); curs=
+or: pointer; margin-right: 0px; }
+  .nav-content .search svg { position: absolute; align-self: center; paddin=
+g-left: 4px; }
+  .toggler__input { display: none; }
+  .toggler__label { width: 40px; cursor: pointer; display: flex; align-item=
+s: center; justify-content: center; padding: 8px; flex-shrink: 0; }
+  .toggler__label:hover, .toggler__label:focus { background-color: rgba(127=
+, 127, 127, 0.5); }
+  .toggler__label > span { position: relative; flex: 0 0 auto; height: 2px;=
+ width: 100%; background: currentcolor; transition: all 400ms ease 0s; }
+  .toggler__label > span::before, .toggler__label > span::after { content: =
+""; height: 2px; width: 100%; background: inherit; position: absolute; left=
+: 0px; top: -8px; }
+  .toggler__label > span::after { top: 8px; }
+  .toggler__input:checked ~ nav > .toggler__label span { transform: rotate(=
+135deg); }
+  .toggler__input:checked ~ nav > .toggler__label span::before { transform:=
+ rotate(90deg); }
+  .toggler__input:checked ~ nav > .toggler__label span::before, .toggler__i=
+nput:checked ~ nav > .toggler__label span::after { top: 0px; }
+  .toggler__input:checked:hover ~ nav > .toggler__label span { transform: r=
+otate(315deg); }
+  .toggler__input:checked ~ .menu-wrapper { visibility: visible; left: 0px;=
+ }
+  .menu-wrapper { display: block; position: fixed; top: 0px; transition: le=
+ft 400ms ease 0s; left: -310px; width: 300px; height: 100%; background-colo=
+r: rgb(238, 238, 238); color: rgb(68, 68, 68); box-shadow: rgba(0, 0, 0, 0.=
+2) 0px 0px 10px; overflow-y: auto; }
+  .menu-wrapper.open { visibility: visible; left: 0px; }
+  .menu { padding: 40px 10px 30px 20px; }
+  .menu-wrapper h3, .menu-wrapper h4 { margin-bottom: 0px; font-weight: nor=
+mal; }
+  .menu-wrapper h4 { font-size: 1.3em; }
+  .menu-wrapper h3 { font-size: 1.4em; }
+  .menu-wrapper h3 + p, .menu-wrapper h4 + p { margin-top: 0.5rem; }
+  .menu a { font-size: smaller; text-decoration: none; }
+  .menu ul { list-style: none; line-height: 1.4; overflow-wrap: break-word;=
+ padding-left: 0px; }
+  .menu ul ul { margin-left: 20px; list-style: square; }
+  .menu ul li { margin-bottom: 0.5rem; }
+  .language_switcher_placeholder { margin-top: 2rem; }
+  .language_switcher_placeholder select { width: 100%; }
+  .document { position: relative; z-index: 0; }
+  .responsive-table__container { width: 100%; overflow-x: auto; }
+  .menu .theme-selector-label { margin-top: 0.5em; display: flex; width: 10=
+0%; }
+  .menu .theme-selector { flex: 1 1 auto; }
+}
+
+@media (min-width: 1024px) {
+  div.footer { margin-top: -2em; }
+}
+
+:root { --versionadded: var(--good-color); --versionchanged: var(--middle-c=
+olor); --deprecated: var(--bad-color); --versionadded-border: var(--good-bo=
+rder); --versionchanged-border: var(--middle-border); --deprecated-border: =
+var(--bad-border); }
+
+div.versionadded, div.versionchanged, div.deprecated, div.deprecated-remove=
+d { border-left: 3px solid; padding: 0px 1rem; }
+
+div.versionadded { border-left-color: var(--versionadded-border); }
+
+div.versionchanged { border-left-color: var(--versionchanged-border); }
+
+div.deprecated, div.deprecated-removed, div.versionremoved { border-left-co=
+lor: var(--deprecated-border); }
+
+div.versionadded .versionmodified { color: var(--versionadded); }
+
+div.versionchanged .versionmodified { color: var(--versionchanged); }
+
+div.deprecated .versionmodified, div.deprecated-removed .versionmodified, d=
+iv.versionremoved .versionmodified { color: var(--deprecated); }
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/classic.css
+
+@charset "utf-8";
+
+@import url("basic.css");
+
+html { background-color: rgb(255, 255, 255); }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "avenir next", aveni=
+r, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto=
+, arial, sans-serif; font-size: 100%; background-color: white; color: rgb(0=
+, 0, 0); margin: 0px; padding: 0px; }
+
+div.document { display: flex; background-color: white; }
+
+div.documentwrapper { float: left; width: 100%; }
+
+div.bodywrapper { margin: 0px 0px 0px 230px; }
+
+div.body { background-color: white; color: rgb(34, 34, 34); padding: 0px 20=
+px 30px; }
+
+div.footer { color: rgb(85, 85, 85); width: 100%; padding: 9px 0px; text-al=
+ign: center; font-size: 75%; }
+
+div.footer a { color: rgb(85, 85, 85); text-decoration: underline; }
+
+div.related { background-color: white; line-height: 30px; color: rgb(102, 1=
+02, 102); }
+
+div.related a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar { }
+
+div.sphinxsidebar h3 { font-family: -apple-system, BlinkMacSystemFont, "ave=
+nir next", avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubun=
+tu, roboto, noto, arial, sans-serif; color: rgb(68, 68, 68); font-size: 1.4=
+em; font-weight: normal; margin: 0px; padding: 0px; }
+
+div.sphinxsidebar h3 a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar h4 { font-family: -apple-system, BlinkMacSystemFont, "ave=
+nir next", avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubun=
+tu, roboto, noto, arial, sans-serif; color: rgb(68, 68, 68); font-size: 1.3=
+em; font-weight: normal; margin: 5px 0px 0px; padding: 0px; }
+
+div.sphinxsidebar p { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar p.topless { margin: 5px 10px 10px; }
+
+div.sphinxsidebar ul { margin: 10px; padding: 0px; color: rgb(68, 68, 68); =
+}
+
+div.sphinxsidebar a { color: rgb(68, 68, 68); }
+
+div.sphinxsidebar input { border: 1px solid rgb(68, 68, 68); font-family: s=
+ans-serif; font-size: 1em; }
+
+#sidebarbutton { height: 100%; background-color: rgb(204, 204, 204); margin=
+-left: 0px; color: rgb(255, 255, 255); border-left: 1px solid white; font-s=
+ize: 1.2em; cursor: pointer; padding-top: 1px; float: right; display: table=
+; }
+
+#sidebarbutton:hover { background-color: white; }
+
+#sidebarbutton span { display: table-cell; vertical-align: middle; }
+
+div.sphinxsidebarwrapper { float: left; margin-right: 0px; }
+
+a { color: rgb(0, 144, 192); text-decoration: none; }
+
+a:visited { color: rgb(0, 96, 143); text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h=
+6 { font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, =
+"segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, roboto, noto, a=
+rial, sans-serif; background-color: white; font-weight: normal; color: rgb(=
+26, 26, 26); border-bottom: 1px solid rgb(204, 204, 204); margin: 20px -20p=
+x 10px; padding: 3px 0px 3px 10px; }
+
+div.body h1 { margin-top: 0px; font-size: 200%; }
+
+div.body h2 { font-size: 160%; }
+
+div.body h3 { font-size: 140%; }
+
+div.body h4 { font-size: 120%; }
+
+div.body h5 { font-size: 110%; }
+
+div.body h6 { font-size: 100%; }
+
+a.headerlink { color: rgb(170, 170, 170); font-size: 0.8em; padding: 0px 4p=
+x; text-decoration: none; }
+
+a.headerlink:hover { background-color: rgb(170, 170, 170); color: white; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { text-align: jus=
+tify; line-height: 130%; }
+
+div.admonition p.admonition-title + p { display: inline; }
+
+div.admonition p { margin-bottom: 5px; }
+
+div.admonition pre { margin-bottom: 5px; }
+
+div.admonition ul, div.admonition ol { margin-bottom: 5px; }
+
+div.note { background-color: rgb(238, 238, 238); border: 1px solid rgb(204,=
+ 204, 204); }
+
+div.seealso { background-color: rgb(255, 255, 204); border: 1px solid rgb(2=
+55, 255, 102); }
+
+nav.contents, aside.topic, div.topic { background-color: rgb(238, 238, 238)=
+; }
+
+div.warning { background-color: rgb(255, 228, 228); border: 1px solid rgb(2=
+55, 102, 102); }
+
+p.admonition-title { display: inline; }
+
+p.admonition-title::after { content: ":"; }
+
+pre { padding: 5px; background-color: rgb(238, 255, 204); color: rgb(51, 51=
+, 51); line-height: 120%; border-top: 1px solid rgb(170, 204, 153); border-=
+bottom: 1px solid rgb(170, 204, 153); border-image: initial; border-left: n=
+one; border-right: none; }
+
+code { background-color: rgb(236, 240, 243); padding: 0px 1px; font-size: 0=
+.95em; }
+
+th, dl.field-list > dt { background-color: rgb(238, 221, 238); }
+
+.warning code { background: rgb(239, 194, 194); }
+
+.note code { background: rgb(214, 214, 214); }
+
+.viewcode-back { font-family: -apple-system, BlinkMacSystemFont, "avenir ne=
+xt", avenir, "segoe ui", "helvetica neue", helvetica, Cantarell, Ubuntu, ro=
+boto, noto, arial, sans-serif; }
+
+div.viewcode-block:target { background-color: rgb(244, 222, 191); border-to=
+p: 1px solid rgb(170, 204, 153); border-bottom: 1px solid rgb(170, 204, 153=
+); }
+
+div.code-block-caption { color: rgb(239, 239, 239); background-color: rgb(2=
+8, 78, 99); }
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/basic.css
+
+@charset "utf-8";
+
+div.clearer { clear: both; }
+
+div.section::after { display: block; content: ""; clear: left; }
+
+div.related { width: 100%; font-size: 90%; }
+
+div.related h3 { display: none; }
+
+div.related ul { margin: 0px; padding: 0px 0px 0px 10px; list-style: none; =
+}
+
+div.related li { display: inline; }
+
+div.related li.right { float: right; margin-right: 5px; }
+
+div.sphinxsidebarwrapper { padding: 10px 5px 0px 10px; }
+
+div.sphinxsidebar { float: left; width: 230px; margin-left: -100%; font-siz=
+e: 90%; overflow-wrap: break-word; }
+
+div.sphinxsidebar ul { list-style: none; }
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points { margin-left: 20=
+px; list-style: square; }
+
+div.sphinxsidebar ul ul { margin-top: 0px; margin-bottom: 0px; }
+
+div.sphinxsidebar form { margin-top: 10px; }
+
+div.sphinxsidebar input { border: 1px solid rgb(152, 219, 204); font-family=
+: sans-serif; font-size: 1em; }
+
+div.sphinxsidebar #searchbox form.search { overflow: hidden; }
+
+div.sphinxsidebar #searchbox input[type=3D"text"] { float: left; width: 80%=
+; padding: 0.25em; box-sizing: border-box; }
+
+div.sphinxsidebar #searchbox input[type=3D"submit"] { float: left; width: 2=
+0%; border-left: none; padding: 0.25em; box-sizing: border-box; }
+
+img { border: 0px; max-width: 100%; }
+
+ul.search { margin: 10px 0px 0px 20px; padding: 0px; }
+
+ul.search li { padding: 5px 0px 5px 20px; background-image: url("file.png")=
+; background-repeat: no-repeat; background-position: 0px 7px; }
+
+ul.search li a { font-weight: bold; }
+
+ul.search li p.context { color: rgb(136, 136, 136); margin: 2px 0px 0px 30p=
+x; text-align: left; }
+
+ul.keywordmatches li.goodmatch a { font-weight: bold; }
+
+table.contentstable { width: 90%; margin-left: auto; margin-right: auto; }
+
+table.contentstable p.biglink { line-height: 150%; }
+
+a.biglink { font-size: 1.3em; }
+
+span.linkdescr { font-style: italic; padding-top: 5px; font-size: 90%; }
+
+table.indextable { width: 100%; }
+
+table.indextable td { text-align: left; vertical-align: top; }
+
+table.indextable ul { margin-top: 0px; margin-bottom: 0px; list-style-type:=
+ none; }
+
+table.indextable > tbody > tr > td > ul { padding-left: 0em; }
+
+table.indextable tr.pcap { height: 10px; }
+
+table.indextable tr.cap { margin-top: 10px; background-color: rgb(242, 242,=
+ 242); }
+
+img.toggler { margin-right: 3px; margin-top: 3px; cursor: pointer; }
+
+div.modindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+div.genindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+table.modindextable td { padding: 2px; border-collapse: collapse; }
+
+div.body { min-width: 360px; max-width: 800px; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { hyphens: auto; =
+}
+
+a.headerlink { visibility: hidden; }
+
+a:visited { color: rgb(85, 26, 139); }
+
+h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, =
+h4:hover > a.headerlink, h5:hover > a.headerlink, h6:hover > a.headerlink, =
+dt:hover > a.headerlink, caption:hover > a.headerlink, p.caption:hover > a.=
+headerlink, div.code-block-caption:hover > a.headerlink { visibility: visib=
+le; }
+
+div.body p.caption { text-align: inherit; }
+
+div.body td { text-align: left; }
+
+.first { margin-top: 0px !important; }
+
+p.rubric { margin-top: 30px; font-weight: bold; }
+
+img.align-left, figure.align-left, .figure.align-left, object.align-left { =
+clear: left; float: left; margin-right: 1em; }
+
+img.align-right, figure.align-right, .figure.align-right, object.align-righ=
+t { clear: right; float: right; margin-left: 1em; }
+
+img.align-center, figure.align-center, .figure.align-center, object.align-c=
+enter { display: block; margin-left: auto; margin-right: auto; }
+
+img.align-default, figure.align-default, .figure.align-default { display: b=
+lock; margin-left: auto; margin-right: auto; }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-default { text-align: center; }
+
+.align-right { text-align: right; }
+
+div.sidebar, aside.sidebar { margin: 0px 0px 0.5em 1em; border: 1px solid r=
+gb(221, 221, 187); padding: 7px; background-color: rgb(255, 255, 238); widt=
+h: 40%; float: right; clear: right; overflow-x: auto; }
+
+p.sidebar-title { font-weight: bold; }
+
+nav.contents, aside.topic, div.admonition, div.topic, blockquote { clear: l=
+eft; }
+
+nav.contents, aside.topic, div.topic { border: 1px solid rgb(204, 204, 204)=
+; padding: 7px; margin: 10px 0px; }
+
+p.topic-title { font-size: 1.1em; font-weight: bold; margin-top: 10px; }
+
+div.admonition { margin-top: 10px; margin-bottom: 10px; padding: 7px; }
+
+div.admonition dt { font-weight: bold; }
+
+p.admonition-title { margin: 0px 10px 5px 0px; font-weight: bold; }
+
+div.body p.centered { text-align: center; margin-top: 25px; }
+
+div.sidebar > :last-child, aside.sidebar > :last-child, nav.contents > :las=
+t-child, aside.topic > :last-child, div.topic > :last-child, div.admonition=
+ > :last-child { margin-bottom: 0px; }
+
+div.sidebar::after, aside.sidebar::after, nav.contents::after, aside.topic:=
+:after, div.topic::after, div.admonition::after, blockquote::after { displa=
+y: block; content: ""; clear: both; }
+
+table.docutils { margin-top: 10px; margin-bottom: 10px; border: 0px; border=
+-collapse: collapse; }
+
+table.align-center { margin-left: auto; margin-right: auto; }
+
+table.align-default { margin-left: auto; margin-right: auto; }
+
+table caption span.caption-number { font-style: italic; }
+
+table caption span.caption-text { }
+
+table.docutils td, table.docutils th { padding: 1px 8px 1px 5px; border-wid=
+th: 0px 0px 1px; border-top-style: initial; border-top-color: initial; bord=
+er-left-style: initial; border-left-color: initial; border-right-style: ini=
+tial; border-right-color: initial; border-bottom-style: solid; border-botto=
+m-color: rgb(170, 170, 170); }
+
+th { text-align: left; padding-right: 5px; }
+
+table.citation { border-left: 1px solid gray; margin-left: 1px; }
+
+table.citation td { border-bottom: none; }
+
+th > :first-child, td > :first-child { margin-top: 0px; }
+
+th > :last-child, td > :last-child { margin-bottom: 0px; }
+
+div.figure, figure { margin: 0.5em; padding: 0.5em; }
+
+div.figure p.caption, figcaption { padding: 0.3em; }
+
+div.figure p.caption span.caption-number, figcaption span.caption-number { =
+font-style: italic; }
+
+div.figure p.caption span.caption-text, figcaption span.caption-text { }
+
+table.field-list td, table.field-list th { border: 0px !important; }
+
+.field-list ul { margin: 0px; padding-left: 1em; }
+
+.field-list p { margin: 0px; }
+
+.field-name { hyphens: manual; }
+
+table.hlist { margin: 1em 0px; }
+
+table.hlist td { vertical-align: top; }
+
+.sig { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sa=
+ns Mono", monospace; }
+
+.sig-name, code.descname { background-color: transparent; font-weight: bold=
+; }
+
+.sig-name { font-size: 1.1em; }
+
+code.descname { font-size: 1.2em; }
+
+.sig-prename, code.descclassname { background-color: transparent; }
+
+.optional { font-size: 1.3em; }
+
+.sig-paren { font-size: larger; }
+
+.sig-param.n { font-style: italic; }
+
+.sig-inline.c-texpr, .sig-inline.cpp-texpr { font-family: unset; }
+
+.sig.c .k, .sig.c .kt, .sig.cpp .k, .sig.cpp .kt { color: rgb(0, 51, 179); =
+}
+
+.sig.c .m, .sig.cpp .m { color: rgb(23, 80, 235); }
+
+.sig.c .s, .sig.c .sc, .sig.cpp .s, .sig.cpp .sc { color: rgb(6, 125, 23); =
+}
+
+ol.arabic { list-style: decimal; }
+
+ol.loweralpha { list-style: lower-alpha; }
+
+ol.upperalpha { list-style: upper-alpha; }
+
+ol.lowerroman { list-style: lower-roman; }
+
+ol.upperroman { list-style: upper-roman; }
+
+:not(li) > ol > li:first-child > :first-child, :not(li) > ul > li:first-chi=
+ld > :first-child { margin-top: 0px; }
+
+:not(li) > ol > li:last-child > :last-child, :not(li) > ul > li:last-child =
+> :last-child { margin-bottom: 0px; }
+
+ol.simple ol p, ol.simple ul p, ul.simple ol p, ul.simple ul p { margin-top=
+: 0px; }
+
+ol.simple > li:not(:first-child) > p, ul.simple > li:not(:first-child) > p =
+{ margin-top: 0px; }
+
+ol.simple p, ul.simple p { margin-bottom: 0px; }
+
+aside.footnote > span, div.citation > span { float: left; }
+
+aside.footnote > span:last-of-type, div.citation > span:last-of-type { padd=
+ing-right: 0.5em; }
+
+aside.footnote > p { margin-left: 2em; }
+
+div.citation > p { margin-left: 4em; }
+
+aside.footnote > p:last-of-type, div.citation > p:last-of-type { margin-bot=
+tom: 0em; }
+
+aside.footnote > p:last-of-type::after, div.citation > p:last-of-type::afte=
+r { content: ""; clear: both; }
+
+dl.field-list { display: grid; grid-template-columns: fit-content(30%) auto=
+; }
+
+dl.field-list > dt { font-weight: bold; word-break: break-word; padding-lef=
+t: 0.5em; padding-right: 5px; }
+
+dl.field-list > dd { padding-left: 0.5em; margin-top: 0em; margin-left: 0em=
+; margin-bottom: 0em; }
+
+dl { margin-bottom: 15px; }
+
+dd > :first-child { margin-top: 0px; }
+
+dd ul, dd table { margin-bottom: 10px; }
+
+dd { margin-top: 3px; margin-bottom: 10px; margin-left: 30px; }
+
+.sig dd { margin-top: 0px; margin-bottom: 0px; }
+
+.sig dl { margin-top: 0px; margin-bottom: 0px; }
+
+dl > dd:last-child, dl > dd:last-child > :last-child { margin-bottom: 0px; =
+}
+
+dt:target, span.highlighted { background-color: rgb(251, 229, 78); }
+
+rect.highlighted { fill: rgb(251, 229, 78); }
+
+dl.glossary dt { font-weight: bold; font-size: 1.1em; }
+
+.versionmodified { font-style: italic; }
+
+.system-message { background-color: rgb(255, 221, 170); padding: 5px; borde=
+r: 3px solid red; }
+
+.footnote:target { background-color: rgb(255, 255, 170); }
+
+.line-block { display: block; margin-top: 1em; margin-bottom: 1em; }
+
+.line-block .line-block { margin-top: 0px; margin-bottom: 0px; margin-left:=
+ 1.5em; }
+
+.guilabel, .menuselection { font-family: sans-serif; }
+
+.accelerator { text-decoration: underline; }
+
+.classifier { font-style: oblique; }
+
+.classifier::before { font-style: normal; margin: 0px 0.5em; content: ":"; =
+display: inline-block; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+.translated { background-color: rgba(207, 255, 207, 0.2); }
+
+.untranslated { background-color: rgba(255, 207, 207, 0.2); }
+
+pre { overflow: auto hidden; }
+
+pre, div[class*=3D"highlight-"] { clear: both; }
+
+span.pre { hyphens: none; white-space: nowrap; }
+
+div[class*=3D"highlight-"] { margin: 1em 0px; }
+
+td.linenos pre { border: 0px; background-color: transparent; color: rgb(170=
+, 170, 170); }
+
+table.highlighttable { display: block; }
+
+table.highlighttable tbody { display: block; }
+
+table.highlighttable tr { display: flex; }
+
+table.highlighttable td { margin: 0px; padding: 0px; }
+
+table.highlighttable td.linenos { padding-right: 0.5em; }
+
+table.highlighttable td.code { flex: 1 1 0%; overflow: hidden; }
+
+.highlight .hll { display: block; }
+
+div.highlight pre, table.highlighttable pre { margin: 0px; }
+
+div.code-block-caption + div { margin-top: 0px; }
+
+div.code-block-caption { margin-top: 1em; padding: 2px 5px; font-size: smal=
+l; }
+
+div.code-block-caption code { background-color: transparent; }
+
+table.highlighttable td.linenos, span.linenos, div.highlight span.gp { user=
+-select: none; }
+
+div.code-block-caption span.caption-number { padding: 0.1em 0.3em; font-sty=
+le: italic; }
+
+div.code-block-caption span.caption-text { }
+
+div.literal-block-wrapper { margin: 1em 0px; }
+
+code.xref, a code { background-color: transparent; font-weight: bold; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { background-color: tr=
+ansparent; }
+
+.viewcode-link { float: right; }
+
+.viewcode-back { float: right; font-family: sans-serif; }
+
+div.viewcode-block:target { margin: -1px -10px; padding: 0px 10px; }
+
+img.math { vertical-align: middle; }
+
+div.body div.math p { text-align: center; }
+
+span.eqno { float: right; }
+
+span.eqno a.headerlink { position: absolute; z-index: 1; }
+
+div.math:hover a.headerlink { visibility: visible; }
+
+@media print {
+  div.document, div.documentwrapper, div.bodywrapper { width: 100%; margin:=
+ 0px !important; }
+  div.sphinxsidebar, div.related, div.footer, #top-link { display: none; }
+}
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pygments_dark.css?v=b20cc3f5
+
+@charset "utf-8";
+
+pre { line-height: 125%; }
+
+td.linenos .normal { color: inherit; background-color: transparent; padding=
+-left: 5px; padding-right: 5px; }
+
+span.linenos { color: inherit; background-color: transparent; padding-left:=
+ 5px; padding-right: 5px; }
+
+td.linenos .special { color: rgb(0, 0, 0); background-color: rgb(255, 255, =
+192); padding-left: 5px; padding-right: 5px; }
+
+span.linenos.special { color: rgb(0, 0, 0); background-color: rgb(255, 255,=
+ 192); padding-left: 5px; padding-right: 5px; }
+
+.highlight .hll { background-color: rgb(73, 72, 62); }
+
+.highlight { background: rgb(39, 40, 34); color: rgb(248, 248, 242); }
+
+.highlight .c { color: rgb(149, 144, 119); }
+
+.highlight .err { color: rgb(237, 0, 126); background-color: rgb(30, 0, 16)=
+; }
+
+.highlight .esc { color: rgb(248, 248, 242); }
+
+.highlight .g { color: rgb(248, 248, 242); }
+
+.highlight .k { color: rgb(102, 217, 239); }
+
+.highlight .l { color: rgb(174, 129, 255); }
+
+.highlight .n { color: rgb(248, 248, 242); }
+
+.highlight .o { color: rgb(255, 70, 137); }
+
+.highlight .x { color: rgb(248, 248, 242); }
+
+.highlight .p { color: rgb(248, 248, 242); }
+
+.highlight .ch { color: rgb(149, 144, 119); }
+
+.highlight .cm { color: rgb(149, 144, 119); }
+
+.highlight .cp { color: rgb(149, 144, 119); }
+
+.highlight .cpf { color: rgb(149, 144, 119); }
+
+.highlight .c1 { color: rgb(149, 144, 119); }
+
+.highlight .cs { color: rgb(149, 144, 119); }
+
+.highlight .gd { color: rgb(255, 70, 137); }
+
+.highlight .ge { color: rgb(248, 248, 242); font-style: italic; }
+
+.highlight .ges { color: rgb(248, 248, 242); font-weight: bold; font-style:=
+ italic; }
+
+.highlight .gr { color: rgb(248, 248, 242); }
+
+.highlight .gh { color: rgb(248, 248, 242); }
+
+.highlight .gi { color: rgb(166, 226, 46); }
+
+.highlight .go { color: rgb(102, 217, 239); }
+
+.highlight .gp { color: rgb(255, 70, 137); font-weight: bold; }
+
+.highlight .gs { color: rgb(248, 248, 242); font-weight: bold; }
+
+.highlight .gu { color: rgb(149, 144, 119); }
+
+.highlight .gt { color: rgb(248, 248, 242); }
+
+.highlight .kc { color: rgb(102, 217, 239); }
+
+.highlight .kd { color: rgb(102, 217, 239); }
+
+.highlight .kn { color: rgb(255, 70, 137); }
+
+.highlight .kp { color: rgb(102, 217, 239); }
+
+.highlight .kr { color: rgb(102, 217, 239); }
+
+.highlight .kt { color: rgb(102, 217, 239); }
+
+.highlight .ld { color: rgb(230, 219, 116); }
+
+.highlight .m { color: rgb(174, 129, 255); }
+
+.highlight .s { color: rgb(230, 219, 116); }
+
+.highlight .na { color: rgb(166, 226, 46); }
+
+.highlight .nb { color: rgb(248, 248, 242); }
+
+.highlight .nc { color: rgb(166, 226, 46); }
+
+.highlight .no { color: rgb(102, 217, 239); }
+
+.highlight .nd { color: rgb(166, 226, 46); }
+
+.highlight .ni { color: rgb(248, 248, 242); }
+
+.highlight .ne { color: rgb(166, 226, 46); }
+
+.highlight .nf { color: rgb(166, 226, 46); }
+
+.highlight .nl { color: rgb(248, 248, 242); }
+
+.highlight .nn { color: rgb(248, 248, 242); }
+
+.highlight .nx { color: rgb(166, 226, 46); }
+
+.highlight .py { color: rgb(248, 248, 242); }
+
+.highlight .nt { color: rgb(255, 70, 137); }
+
+.highlight .nv { color: rgb(248, 248, 242); }
+
+.highlight .ow { color: rgb(255, 70, 137); }
+
+.highlight .pm { color: rgb(248, 248, 242); }
+
+.highlight .w { color: rgb(248, 248, 242); }
+
+.highlight .mb { color: rgb(174, 129, 255); }
+
+.highlight .mf { color: rgb(174, 129, 255); }
+
+.highlight .mh { color: rgb(174, 129, 255); }
+
+.highlight .mi { color: rgb(174, 129, 255); }
+
+.highlight .mo { color: rgb(174, 129, 255); }
+
+.highlight .sa { color: rgb(230, 219, 116); }
+
+.highlight .sb { color: rgb(230, 219, 116); }
+
+.highlight .sc { color: rgb(230, 219, 116); }
+
+.highlight .dl { color: rgb(230, 219, 116); }
+
+.highlight .sd { color: rgb(230, 219, 116); }
+
+.highlight .s2 { color: rgb(230, 219, 116); }
+
+.highlight .se { color: rgb(174, 129, 255); }
+
+.highlight .sh { color: rgb(230, 219, 116); }
+
+.highlight .si { color: rgb(230, 219, 116); }
+
+.highlight .sx { color: rgb(230, 219, 116); }
+
+.highlight .sr { color: rgb(230, 219, 116); }
+
+.highlight .s1 { color: rgb(230, 219, 116); }
+
+.highlight .ss { color: rgb(230, 219, 116); }
+
+.highlight .bp { color: rgb(248, 248, 242); }
+
+.highlight .fm { color: rgb(166, 226, 46); }
+
+.highlight .vc { color: rgb(248, 248, 242); }
+
+.highlight .vg { color: rgb(248, 248, 242); }
+
+.highlight .vi { color: rgb(248, 248, 242); }
+
+.highlight .vm { color: rgb(248, 248, 242); }
+
+.highlight .il { color: rgb(174, 129, 255); }
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/pydoctheme_dark.css
+
+@charset "utf-8";
+
+:root { --good-color: rgb(79 196 100); --good-border: var(--good-color); --=
+middle-color: rgb(244, 227, 76); --middle-border: var(--middle-color); --ba=
+d-color: rgb(244, 76, 78); --bad-border: var(--bad-color); }
+
+:root { scrollbar-color: rgb(97, 97, 97) transparent; color-scheme: dark; }
+
+html, body { background-color: rgb(34, 34, 34); color: rgba(255, 255, 255, =
+0.87); }
+
+div.related { color: rgba(255, 255, 255, 0.7); border-color: rgb(66, 66, 66=
+); }
+
+div.sphinxsidebar, .menu-wrapper { background-color: rgb(51, 51, 51); color=
+: inherit; }
+
+#sidebarbutton { background-color: rgb(85, 85, 85) !important; color: inher=
+it !important; }
+
+div.sidebar, aside.sidebar { background-color: rgb(66, 66, 66); border-colo=
+r: rgb(97, 97, 97); }
+
+div.body a { color: rgb(119, 170, 255); }
+
+div.body a:visited { color: rgb(0, 153, 238); }
+
+a.headerlink:hover { background-color: rgb(66, 66, 66); }
+
+div.related a { color: currentcolor; }
+
+div.footer, div.footer a { color: currentcolor; }
+
+dt:target, span.highlighted { background-color: rgb(97, 97, 97); }
+
+.footnote:target { background-color: rgb(44, 62, 80); }
+
+dl.field-list > dt { background-color: rgb(68, 51, 68); }
+
+table.docutils td, table.docutils th { border-color: rgb(97, 97, 97) !impor=
+tant; }
+
+table.docutils th { background-color: rgb(66, 66, 66); }
+
+.stableabi { color: rgb(187, 187, 255); }
+
+div.body pre { border-color: rgb(97, 97, 97); }
+
+code { background-color: rgb(66, 66, 66); }
+
+div.body div.seealso { background-color: rgba(255, 255, 0, 0.1); }
+
+div.warning { background-color: rgba(255, 0, 0, 0.2); }
+
+.warning code { background-color: rgba(255, 0, 0, 0.5); }
+
+:root { --admonition-background: #ffffff1a; --admonition-border: currentCol=
+or; --admonition-color: #ffffffde; --attention-background: #ffffff1a; --att=
+ention-border: currentColor; --caution-background: #ffff001a; --caution-bor=
+der: #dd6; --danger-background: #f003; --danger-border: #f66; --error-backg=
+round: #f003; --error-border: #f66; --hint-background: #0044117a; --hint-bo=
+rder: green; --seealso-background: #ffff001a; --seealso-border: #dd6; --tip=
+-background: #0044117a; --tip-border: green; --warning-background: #ff00003=
+3; --warning-border: #ff6666; }
+
+aside.topic, div.topic, div.note, nav.contents { background-color: rgba(255=
+, 255, 255, 0.1); border-color: currentcolor; }
+
+.note code { background-color: rgba(255, 255, 255, 0.1); }
+
+.mobile-nav { box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 2px 0px; }
+
+.nav-content { background-color: black; }
+
+img.invert-in-dark-mode { filter: invert(1) hue-rotate(0.5turn); }
+
+.sig.c .k, .sig.c .kt, .sig.cpp .k, .sig.cpp .kt { color: rgb(82, 131, 255)=
+; }
+
+:root { --versionadded: var(--good-color); --versionchanged: var(--middle-c=
+olor); --deprecated: var(--bad-color); }
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://docs.python.org/3/_static/py.svg
+
+<svg width=3D"16" height=3D"16" viewBox=3D"0 0 16 16" fill=3D"none" xmlns=
+=3D"http://www.w3.org/2000/svg">
+<path d=3D"M7.90472 0.00013087C7.24498 0.00316295 6.61493 0.0588153 6.06056=
+ 0.15584C4.42744 0.441207 4.13093 1.0385 4.13093 2.14002V3.59479H7.99018V4.=
+07971H4.13093H2.68259C1.56098 4.07971 0.578874 4.7465 0.271682 6.01495C-0.0=
+826595 7.4689 -0.0983765 8.37618 0.271682 9.89434C0.546011 11.0244 1.20115 =
+11.8296 2.32275 11.8296H3.64965V10.0856C3.64965 8.82574 4.75178 7.71441 6.0=
+6056 7.71441H9.91531C10.9883 7.71441 11.8449 6.84056 11.8449 5.77472V2.1400=
+2C11.8449 1.10556 10.9626 0.328486 9.91531 0.15584C9.25235 0.046687 8.56447=
+ -0.00290121 7.90472 0.00013087ZM5.81767 1.17017C6.2163 1.17017 6.54184 1.4=
+9742 6.54184 1.89978C6.54184 2.30072 6.2163 2.62494 5.81767 2.62494C5.41761=
+ 2.62494 5.0935 2.30072 5.0935 1.89978C5.0935 1.49742 5.41761 1.17017 5.817=
+67 1.17017Z" fill=3D"url(#paint0_linear)"/>
+<path d=3D"M12.3262 4.07971V5.77472C12.3262 7.08883 11.1998 8.19488 9.9153 =
+8.19488H6.06055C5.00466 8.19488 4.13092 9.0887 4.13092 10.1346V13.7693C4.13=
+092 14.8037 5.04038 15.4122 6.06055 15.709C7.28217 16.0642 8.45364 16.1285 =
+9.9153 15.709C10.8869 15.4307 11.8449 14.8708 11.8449 13.7693V12.3145H7.990=
+17V11.8296H11.8449H13.7746C14.8962 11.8296 15.3141 11.0558 15.7042 9.89434C=
+16.1071 8.69865 16.09 7.5488 15.7042 6.01495C15.427 4.91058 14.8976 4.07971=
+ 13.7746 4.07971H12.3262ZM10.1582 13.2843C10.5583 13.2843 10.8824 13.6086 1=
+0.8824 14.0095C10.8824 14.4119 10.5583 14.7391 10.1582 14.7391C9.75955 14.7=
+391 9.43402 14.4119 9.43402 14.0095C9.43402 13.6086 9.75955 13.2843 10.1582=
+ 13.2843Z" fill=3D"url(#paint1_linear)"/>
+<defs>
+<linearGradient id=3D"paint0_linear" x1=3D"1.25961e-08" y1=3D"1.08223e-08" =
+x2=3D"8.81664" y2=3D"7.59597" gradientUnits=3D"userSpaceOnUse">
+<stop stop-color=3D"#5A9FD4"/>
+<stop offset=3D"1" stop-color=3D"#306998"/>
+</linearGradient>
+<linearGradient id=3D"paint1_linear" x1=3D"10.0654" y1=3D"13.8872" x2=3D"6.=
+91912" y2=3D"9.42957" gradientUnits=3D"userSpaceOnUse">
+<stop stop-color=3D"#FFD43B"/>
+<stop offset=3D"1" stop-color=3D"#FFE873"/>
+</linearGradient>
+</defs>
+</svg>=0A
+------MultipartBoundary--0lSki9Wps6jKku3boe7R4dqvRLqk4F4MYpFYoN8QVM------
